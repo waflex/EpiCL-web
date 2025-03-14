@@ -1,11 +1,47 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+import "./../css/tailwind.css";
+import "./../css/index.css";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <article class="mx-20 p-10 mt-10">
+    <div class="relative flex items-center">
+      <img
+        src="https://picsum.photos/300"
+        alt="quienes somos"
+        class="rounded-[50%]"
+      />
+      <p class="m-5">
+        ¿Quiénes Somos? Bienvenidos a Epic Chile, la primera comunidad en Chile
+        dedicada a Epic: The Musical, la innovadora adaptación de La Odisea que
+        ha conquistado el corazón de miles de fans en todo el mundo. Somos un
+        grupo de apasionados por este musical épico que combina mitología,
+        emociones intensas y una banda sonora increíble. Nuestro objetivo es
+        conectar a los fans en Chile, compartir contenido exclusivo, teorías,
+        análisis y, por supuesto, disfrutar juntos de esta odisea musical. ¿Qué
+        encontrarás aquí?
+        <ul>
+          <li>✅ Noticias y actualizaciones sobre Epic: The Musical.</li>
+          <li>
+            ✅ Espacios para compartir fanart, covers y creaciones de la
+            comunidad.
+          </li>
+          <li>
+            ✅ Análisis de letras, personajes y la historia detrás del musical.
+          </li>
+          <li>✅ Encuentros y actividades para conectar con otros fans.</li>
+          <li>
+            ✅ ¡Y mucho más para que vivas esta historia como nunca antes!
+          </li>
+        </ul>
+        Si Epic te ha emocionado, inspirado o cambiado la forma en que ves la mitología,
+        este es tu lugar. ¡Únete a nuestra comunidad y sé parte de la leyenda! ⚡🌊🏛
+        🔗 Síguenos en nuestras redes y prepárate para una travesía épica. 🚀
+      </p>
+    </div>
+  </article>
 </Layout>
