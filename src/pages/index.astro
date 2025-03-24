@@ -1,4 +1,5 @@
 ---
+import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
 import "./../css/tailwind.css";
@@ -8,40 +9,87 @@ import "./../css/index.css";
 ---
 
 <Layout>
-  <article class="mx-20 p-10 mt-10">
-    <div class="relative flex items-center">
-      <img
-        src="https://picsum.photos/300"
-        alt="quienes somos"
-        class="rounded-[50%]"
-      />
-      <p class="m-5">
-        ¿Quiénes Somos? Bienvenidos a Epic Chile, la primera comunidad en Chile
-        dedicada a Epic: The Musical, la innovadora adaptación de La Odisea que
-        ha conquistado el corazón de miles de fans en todo el mundo. Somos un
-        grupo de apasionados por este musical épico que combina mitología,
-        emociones intensas y una banda sonora increíble. Nuestro objetivo es
-        conectar a los fans en Chile, compartir contenido exclusivo, teorías,
-        análisis y, por supuesto, disfrutar juntos de esta odisea musical. ¿Qué
-        encontrarás aquí?
-        <ul>
-          <li>✅ Noticias y actualizaciones sobre Epic: The Musical.</li>
-          <li>
-            ✅ Espacios para compartir fanart, covers y creaciones de la
-            comunidad.
-          </li>
-          <li>
-            ✅ Análisis de letras, personajes y la historia detrás del musical.
-          </li>
-          <li>✅ Encuentros y actividades para conectar con otros fans.</li>
-          <li>
-            ✅ ¡Y mucho más para que vivas esta historia como nunca antes!
-          </li>
-        </ul>
-        Si Epic te ha emocionado, inspirado o cambiado la forma en que ves la mitología,
-        este es tu lugar. ¡Únete a nuestra comunidad y sé parte de la leyenda! ⚡🌊🏛
-        🔗 Síguenos en nuestras redes y prepárate para una travesía épica. 🚀
-      </p>
+  <Navbar />
+
+  <!-- Hero Section -->
+  <div class="min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        <!-- Text Content -->
+        <div class="lg:w-1/2 space-y-6">
+          <h1 class="text-4xl md:text-5xl font-bold text-zinc-800 mb-6">
+            Bienvenidos al Fan Club de Epic: The Musical en Chile 🎭⚡
+          </h1>
+          
+          <div class="prose prose-lg">
+            <p class="text-lg text-zinc-700">
+              Si Epic: The Musical ha conquistado tu corazón con su historia épica, su música poderosa y su visión única de La Odisea, ¡has llegado al lugar indicado!
+            </p>
+            
+            <div class="my-8 p-6 bg-white rounded-lg shadow-lg">
+              <h2 class="text-2xl font-semibold mb-4 text-zinc-800">¿Qué encontrarás aquí? 🌟</h2>
+              <ul class="space-y-4">
+                <li class="flex items-center gap-3 text-zinc-700">
+                  <span>🎵</span>
+                  Análisis de canciones y teorías
+                </li>
+                <li class="flex items-center gap-3 text-zinc-700">
+                  <span>🎨</span>
+                  Galería de fanarts
+                </li>
+                <li class="flex items-center gap-3 text-zinc-700">
+                  <span>👥</span>
+                  Comunidad apasionada
+                </li>
+                <li class="flex items-center gap-3 text-zinc-700">
+                  <span>🎉</span>
+                  Eventos exclusivos
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Section -->
+        <div class="lg:w-1/2">
+          <div class="relative">
+            <img 
+              src="https://picsum.photos/600/800" 
+              alt="Epic: The Musical" 
+              class="rounded-lg shadow-2xl w-full object-cover"
+            />
+            <div class="absolute -bottom-4 -right-4 bg-primary text-white p-4 rounded-lg shadow-lg">
+              <p class="text-lg font-bold">#OdysseyAwaits</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Featured Section -->
+      <div class="mt-24 grid md:grid-cols-3 gap-8">
+        <div class="card bg-white shadow-xl">
+          <div class="card-body">
+            <h2 class="card-title text-zinc-800">Últimas Noticias 📰</h2>
+            <p class="text-zinc-700">Mantente al día con las últimas actualizaciones del musical y nuestra comunidad.</p>
+          </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body">
+            <h2 class="card-title">Galería de Fans 🎨</h2>
+            <p>Explora las increíbles creaciones de nuestra talentosa comunidad.</p>
+          </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-xl">
+          <div class="card-body">
+            <h2 class="card-title">Eventos 🎉</h2>
+            <p>Descubre nuestros próximos encuentros y actividades especiales.</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </article>
+  </div>
+
+  <Footer />
 </Layout>

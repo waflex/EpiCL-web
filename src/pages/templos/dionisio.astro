@@ -1,0 +1,45 @@
+---
+import Footer from "../../components/Footer.astro";
+import Navbar from "../../components/Navbar.astro";
+import Layout from "../../layouts/Layout.astro";
+import "./../../css/tailwind.css";
+import "./../../css/index.css";
+---
+
+<Layout>
+  <Navbar />
+  <div class="container mx-auto px-4 py-8">
+    <div class="bg-white rounded-lg shadow-lg p-6">
+      <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Templo de Dionisio</h1>
+      
+      <div class="flex flex-col md:flex-row gap-8">
+        <div class="md:w-1/2">
+          <img
+            src="https://picsum.photos/800/605"
+            alt="Templo de Dionisio"
+            class="rounded-lg w-full h-[400px] object-cover shadow-md"
+          />
+        </div>
+        
+        <div class="md:w-1/2 space-y-6">
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <h2 class="text-xl font-semibold text-gray-800 mb-3">Sobre el Templo</h2>
+            <p class="text-gray-700">
+              [Aquí va la descripción del templo y su significado en Epic: The Musical]
+            </p>
+          </div>
+          
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <h2 class="text-xl font-semibold text-gray-800 mb-3">Características</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-2">
+              <li>Característica 1</li>
+              <li>Característica 2</li>
+              <li>Característica 3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <Footer />
+</Layout>

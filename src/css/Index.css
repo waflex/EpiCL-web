@@ -2,12 +2,28 @@ body {
   background: #cfeef6;
 }
 .top {
-  background: rgb(207, 238, 246);
   background: linear-gradient(
     0deg,
     rgba(207, 238, 246, 1) 0%,
     rgba(37, 72, 246, 1) 100%
   );
+}
+
+.underHv:after{
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.underHv:hover:after { 
+  width: 100%; 
+  left: 0; 
 }
 .waves {
   position: relative;
