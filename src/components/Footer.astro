@@ -1,5 +1,14 @@
 ---
 import Logo from '../assets/Temple.svg';
+
+// Usa import.meta.glob para buscar archivos en la carpeta "templos"
+const templos = import.meta.glob('../pages/templos/*.astro');
+
+// Extrae los nombres de los templos a partir de las rutas
+const templosLinks = Object.keys(templos).map((path) => {
+  const name = path.split('/').pop().replace('.astro', '');
+  return { name, path: `/templos/${name}` };
+});
 ---
 <footer class="footer sm:footer-horizontal bg-base-200 text-base-content p-10">
     <aside>
@@ -21,10 +30,9 @@ import Logo from '../assets/Temple.svg';
     </nav>
     <nav>
       <h6 class="footer-title">Templos</h6>
-      <a href="/templos/apolo" class="link link-hover">Apolo</a>
-      <a href="/templos/ares" class="link link-hover">Ares</a>
-      <a href="/templos/athenea" class="link link-hover">Athenea</a>
-      <a href="/templos/artemisa" class="link link-hover">Artemisa</a>
+      {templosLinks.map(({ name, path }) => (
+        <a href={path} class="link link-hover capitalize">{name}</a>
+      ))}
     </nav>
     <nav>
       <h6 class="footer-title">Redes Sociales</h6>

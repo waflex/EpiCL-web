@@ -1,11 +1,22 @@
-body {
-  background: #cfeef6;
+:root {
+  --gradient-start: oklch(100% 0 0);
+  --gradient-end: rgba(37, 72, 246, 1);
 }
+
+[data-theme='dark'] {
+  --gradient-start: oklch(25.33% 0.016 252.42);
+  --gradient-end: rgba(37, 72, 246, 0.8);
+}
+
+body {
+  background: var(--gradient-start);
+}
+
 .top {
   background: linear-gradient(
     0deg,
-    rgba(207, 238, 246, 1) 0%,
-    rgba(37, 72, 246, 1) 100%
+    var(--gradient-start) 0%,
+    var(--gradient-end) 100%
   );
 }
 

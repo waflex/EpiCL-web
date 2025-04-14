@@ -1,7 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
+import Junta from "../Img/Grupo_Santiago.jpg"
 import "./../css/tailwind.css";
 import "./../css/index.css";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -12,49 +14,55 @@ import "./../css/index.css";
   <Navbar />
 
   <!-- Hero Section -->
-  <div class="min-h-screen">
-    <div class="container mx-auto px-4 py-12">
-      <div class="flex flex-col lg:flex-row items-center gap-12">
+  <div class="min-h-screen bg-base-100">
+    <div class="container mx-auto px-6 md:px-8 py-16">
+      <div class="flex flex-col lg:flex-row items-center gap-12 mb-16">
         <!-- Text Content -->
-        <div class="lg:w-1/2 space-y-6">
-          <h1 class="text-4xl md:text-5xl font-bold text-zinc-800 mb-6">
+        <div class="lg:w-1/2 space-y-6 px-4 md:px-0">
+          <h1 class="text-4xl md:text-5xl font-bold text-base-content mb-6">
             Bienvenidos al Fan Club de Epic: The Musical en Chile 🎭⚡
           </h1>
           
           <div class="prose prose-lg">
-            <p class="text-lg text-zinc-700">
+            <p class="text-lg text-base-content/80">
               Si Epic: The Musical ha conquistado tu corazón con su historia épica, su música poderosa y su visión única de La Odisea, ¡has llegado al lugar indicado!
             </p>
             
-            <div class="my-8 p-6 bg-white rounded-lg shadow-lg">
-              <h2 class="text-2xl font-semibold mb-4 text-zinc-800">¿Qué encontrarás aquí? 🌟</h2>
+            <div class="my-8 p-6 bg-base-200 rounded-lg shadow-lg">
+              <h2 class="text-2xl font-semibold mb-4 text-base-content">¿Qué encontrarás aquí? 🌟</h2>
               <ul class="space-y-4">
-                <li class="flex items-center gap-3 text-zinc-700">
+                <li class="flex items-center gap-3 text-base-content/80">
                   <span>🎵</span>
                   Análisis de canciones y teorías
                 </li>
-                <li class="flex items-center gap-3 text-zinc-700">
+                <li class="flex items-center gap-3 text-base-content/80">
                   <span>🎨</span>
                   Galería de fanarts
                 </li>
-                <li class="flex items-center gap-3 text-zinc-700">
+                <li class="flex items-center gap-3 text-base-content/80">
                   <span>👥</span>
                   Comunidad apasionada
                 </li>
-                <li class="flex items-center gap-3 text-zinc-700">
+                <li class="flex items-center gap-3 text-base-content/80">
                   <span>🎉</span>
                   Eventos exclusivos
                 </li>
               </ul>
             </div>
           </div>
+
+          <!-- Call to Action -->
+          <div class="flex gap-4 mt-8">
+            <a href="/About" class="btn btn-primary">Conócenos</a>
+            <a href="/actividades" class="btn btn-outline">Próximos Eventos</a>
+          </div>
         </div>
 
         <!-- Image Section -->
-        <div class="lg:w-1/2">
+        <div class="lg:w-1/2 px-4 md:px-0">
           <div class="relative">
-            <img 
-              src="https://picsum.photos/600/800" 
+            <Image 
+              src={Junta}
               alt="Epic: The Musical" 
               class="rounded-lg shadow-2xl w-full object-cover"
             />
@@ -66,25 +74,27 @@ import "./../css/index.css";
       </div>
 
       <!-- Featured Section -->
-      <div class="mt-24 grid md:grid-cols-3 gap-8">
-        <div class="card bg-white shadow-xl">
+      <div class="mt-24 grid md:grid-cols-3 gap-8 px-4 md:px-0">
+        <div class="card bg-base-200 shadow-xl">
           <div class="card-body">
-            <h2 class="card-title text-zinc-800">Últimas Noticias 📰</h2>
-            <p class="text-zinc-700">Mantente al día con las últimas actualizaciones del musical y nuestra comunidad.</p>
+            <h2 class="card-title text-base-content">Últimas Noticias 📰</h2>
+            <p class="text-base-content/80">Mantente al día con las últimas actualizaciones del musical y nuestra comunidad.</p>
           </div>
         </div>
 
-        <div class="card bg-base-100 shadow-xl">
+        <div class="card bg-base-200 shadow-xl">
           <div class="card-body">
-            <h2 class="card-title">Galería de Fans 🎨</h2>
-            <p>Explora las increíbles creaciones de nuestra talentosa comunidad.</p>
+            <h2 class="card-title text-base-content">Galería de Fans 🎨</h2>
+            <p class="text-base-content/80">Explora las increíbles creaciones de nuestra talentosa comunidad.</p>
           </div>
         </div>
 
-        <div class="card bg-base-100 shadow-xl">
+        <div class="card bg-base-200 shadow-xl">
           <div class="card-body">
-            <h2 class="card-title">Eventos 🎉</h2>
-            <p>Descubre nuestros próximos encuentros y actividades especiales.</p>
+            <h2 class="card-title text-base-content">Eventos 🎉</h2>
+            <p class="text-base-content/80">
+              <a href="/actividades" class="link link-hover">Descubre nuestros próximos encuentros y actividades especiales.</a>
+            </p>
           </div>
         </div>
       </div>

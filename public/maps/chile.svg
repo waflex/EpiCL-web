@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 300 800" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .region {
+      fill: #e2e8f0;
+      stroke: #475569;
+      stroke-width: 1;
+      transition: fill 0.3s ease;
+      cursor: pointer;
+    }
+    .region:hover {
+      fill: #93c5fd;
+    }
+  </style>
+  
+  <!-- Regiones de Norte a Sur -->
+  <path id="arica" class="region" d="M100,10 L120,10 L120,30 L100,30 Z"/>
+  <path id="tarapaca" class="region" d="M90,35 L130,35 L130,65 L90,65 Z"/>
+  <path id="antofagasta" class="region" d="M80,70 L140,70 L140,120 L80,120 Z"/>
+  <path id="atacama" class="region" d="M85,125 L135,125 L135,165 L85,165 Z"/>
+  <path id="coquimbo" class="region" d="M90,170 L130,170 L130,200 L90,200 Z"/>
+  <path id="valparaiso" class="region" d="M95,205 L125,205 L125,225 L95,225 Z"/>
+  <path id="metropolitana" class="region" d="M100,230 L120,230 L120,245 L100,245 Z"/>
+  <path id="ohiggins" class="region" d="M95,250 L125,250 L125,270 L95,270 Z"/>
+  <path id="maule" class="region" d="M90,275 L130,275 L130,300 L90,300 Z"/>
+  <path id="nuble" class="region" d="M95,305 L125,305 L125,325 L95,325 Z"/>
+  <path id="biobio" class="region" d="M90,330 L130,330 L130,355 L90,355 Z"/>
+  <path id="araucania" class="region" d="M95,360 L125,360 L125,385 L95,385 Z"/>
+  <path id="losrios" class="region" d="M100,390 L120,390 L120,410 L100,410 Z"/>
+  <path id="loslagos" class="region" d="M85,415 L135,415 L135,455 L85,455 Z"/>
+  <path id="aysen" class="region" d="M90,460 L130,460 L130,510 L90,510 Z"/>
+  <path id="magallanes" class="region" d="M95,515 L125,515 L125,575 L95,575 Z"/>
+
+  <!-- Nombres de las regiones -->
+  <g class="region-labels" style="font-size: 8px; font-family: Arial;">
+    <text x="140" y="20">Arica y Parinacota</text>
+    <text x="140" y="50">Tarapacá</text>
+    <text x="140" y="95">Antofagasta</text>
+    <text x="140" y="145">Atacama</text>
+    <text x="140" y="185">Coquimbo</text>
+    <text x="140" y="215">Valparaíso</text>
+    <text x="140" y="237">Metropolitana</text>
+    <text x="140" y="260">O'Higgins</text>
+    <text x="140" y="287">Maule</text>
+    <text x="140" y="315">Ñuble</text>
+    <text x="140" y="342">Biobío</text>
+    <text x="140" y="372">Araucanía</text>
+    <text x="140" y="400">Los Ríos</text>
+    <text x="140" y="435">Los Lagos</text>
+    <text x="140" y="485">Aysén</text>
+    <text x="140" y="545">Magallanes</text>
+  </g>
+</svg>

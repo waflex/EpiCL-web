@@ -2,6 +2,16 @@
 import { Image } from "astro:assets";
 import Logo_Image from "../Img/Epic_Logo.png";
 import Waves from "./Waves.astro";
+import ThemeToggle from "./ThemeToggle.astro";
+
+// Usa import.meta.glob para buscar archivos en la carpeta "templos"
+const templos = import.meta.glob('../pages/templos/*.astro');
+
+// Extrae los nombres de los templos a partir de las rutas
+const templosLinks = Object.keys(templos).map((path) => {
+  const name = path.split('/').pop().replace('.astro', '');
+  return { name, path: `/templos/${name}` };
+});
 ---
 
 <main class="top py-1">
@@ -13,6 +23,11 @@ import Waves from "./Waves.astro";
     class="w-4/5 md:w-1/5 mx-auto rounded-[50%] mb-5 mt-24"
   />
   <div class="navbar justify-center">
+    <!-- Add theme toggle button -->
+    <div class="absolute right-4 top-4">
+      <ThemeToggle />
+    </div>
+    
     <!-- Menú móvil -->
     <div class="dropdown lg:hidden">
       <label tabindex="0" class="btn btn-ghost mx-auto">
@@ -20,16 +35,8 @@ import Waves from "./Waves.astro";
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </label>
-      <div class="dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-64 left-0">
-        <div class="collapse collapse-arrow bg-base-100">
-          <input type="radio" name="mobile-accordion" checked="checked" />
-          <div class="collapse-title font-medium">
-            Inicio
-          </div>
-          <div class="collapse-content">
-            <a href="/" class="block p-2 hover:bg-base-200 rounded-lg">Ir a Inicio</a>
-          </div>
-        </div>
+      <div class="dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-64 left-1/2 transform -translate-x-1/2">
+        <a href="/" class="block p-2 hover:bg-base-200 rounded-lg font-medium">Inicio</a>
 
         <div class="collapse collapse-arrow bg-base-100">
           <input type="radio" name="mobile-accordion" />
@@ -37,39 +44,18 @@ import Waves from "./Waves.astro";
             Templos
           </div>
           <div class="collapse-content">
-            <a href="/templos/apolo" class="block p-2 hover:bg-base-200 rounded-lg">Templo de Apolo</a>
-            <a href="/templos/ares" class="block p-2 hover:bg-base-200 rounded-lg">Templo de Ares</a>
-            <a href="/templos/athenea" class="block p-2 hover:bg-base-200 rounded-lg">Templo de Athenea</a>
-            <a href="/templos/artemisa" class="block p-2 hover:bg-base-200 rounded-lg">Templo de Artemisa</a>
-            <a href="/templos/demeter" class="block p-2 hover:bg-base-200 rounded-lg">Templo de Demeter</a>
-            <a href="/templos/dionisio" class="block p-2 hover:bg-base-200 rounded-lg">Templo de Dionisio</a>
-            <a href="/templos/hestia" class="block p-2 hover:bg-base-200 rounded-lg">Templo de Hestia</a>
+            {templosLinks.map(({ name, path }) => (
+              <a href={path} class="block p-2 hover:bg-base-200 rounded-lg capitalize">Templo de {name}</a>
+            ))}
           </div>
         </div>
 
-        <div class="collapse collapse-arrow bg-base-100">
-          <input type="radio" name="mobile-accordion" />
-          <div class="collapse-title font-medium">
-            Quienes Somos
-          </div>
-          <div class="collapse-content">
-            <a href="/About" class="block p-2 hover:bg-base-200 rounded-lg">Ver más</a>
-          </div>
-        </div>
-
-        <div class="collapse collapse-arrow bg-base-100">
-          <input type="radio" name="mobile-accordion" />
-          <div class="collapse-title font-medium">
-            Actividades
-          </div>
-          <div class="collapse-content">
-            <a href="#" class="block p-2 hover:bg-base-200 rounded-lg">Ver actividades</a>
-          </div>
-        </div>
+        <a href="/About" class="block p-2 hover:bg-base-200 rounded-lg font-medium">Ver más</a>
+        <a href="/actividades" class="block p-2 hover:bg-base-200 rounded-lg font-medium">Actividades</a>
       </div>
     </div>
     
-    <!-- Menú desktop permanece igual -->
+    <!-- Menú desktop -->
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1 text-xl">
         <li><a class="underHv" href="/">Inicio</a></li>
@@ -77,18 +63,14 @@ import Waves from "./Waves.astro";
           <details>
             <summary>Templos</summary>
             <ul class="p-2 z-10 text-sm min-w-50">
-              <li><a class="underHv" href="/templos/apolo">Templo de Apolo</a></li>
-              <li><a class="underHv" href="/templos/ares">Templo de Ares</a></li>
-              <li><a class="underHv" href="/templos/athenea">Templo de Athenea</a></li>
-              <li><a class="underHv" href="/templos/artemisa">Templo de Artemisa</a></li>
-              <li><a class="underHv" href="/templos/demeter">Templo de Demeter</a></li>
-              <li><a class="underHv" href="/templos/dionisio">Templo de Dionisio</a></li>
-              <li><a class="underHv" href="/templos/hestia">Templo de Hestia</a></li>
+              {templosLinks.map(({ name, path }) => (
+                <li><a class="underHv capitalize" href={path}>Templo de {name}</a></li>
+              ))}
             </ul>
           </details>
         </li>
         <li><a class="underHv" href="/About">Quienes Somos</a></li>
-        <li><a class="underHv" href="#">Actividades</a></li>
+        <li><a class="underHv" href="/actividades">Actividades</a></li>
       </ul>
     </div>
   </div>

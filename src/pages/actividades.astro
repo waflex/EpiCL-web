@@ -1,0 +1,258 @@
+---
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+import "./../css/tailwind.css";
+import "./../css/index.css";
+---
+
+<Layout>
+  <Navbar />
+
+  <div class="min-h-screen bg-base-100 px-6 md:px-8 py-16">
+    <div class="container mx-auto">
+      <h1 class="text-4xl font-bold text-base-content mb-8">
+        Actividades del Fan Club 🎭
+      </h1>
+
+      <!-- Mapa Interactivo -->
+      <div class="card bg-base-200 shadow-xl mb-12">
+        <div class="card-body">
+          <h2 class="card-title text-base-content">Comunidad Epic en Chile</h2>
+          <div class="flex flex-col lg:flex-row gap-8 items-start">
+            <div class="lg:w-2/5 relative h-[600px]" id="chile-map">
+              <object
+                data="/maps/cl-08.svg"
+                type="image/svg+xml"
+                class="w-full h-full object-left"></object>
+            </div>
+            <div class="lg:w-3/5 space-y-6">
+              <h3 class="text-2xl font-semibold text-base-content">
+                Actividades por Región
+              </h3>
+              <div
+                id="region-info"
+                class="p-6 bg-base-100 rounded-lg min-h-[200px]"
+              >
+                <p class="text-base-content/80">
+                  Selecciona una región en el mapa para ver las actividades
+                  disponibles.
+                </p>
+              </div>
+              <!-- Estadísticas -->
+              <div class="grid grid-cols-2 gap-4">
+                <div class="stat bg-base-100 rounded-lg p-4">
+                  <div class="stat-title">Regiones Activas</div>
+                  <div class="stat-value">2</div>
+                </div>
+                <div class="stat bg-base-100 rounded-lg p-4">
+                  <div class="stat-title">Total Actividades</div>
+                  <div class="stat-value">3</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resto del contenido existente -->
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Próximos Eventos -->
+        <div class="card bg-base-200 shadow-xl">
+          <div class="card-body">
+            <h2 class="card-title text-base-content">Próximos Eventos</h2>
+            <div class="space-y-4">
+              <div class="p-4 bg-base-100 rounded-lg">
+                <h3 class="font-semibold text-base-content">
+                  Reunión Mensual - Enero 2024
+                </h3>
+                <p class="text-base-content/80">
+                  Discusión sobre las nuevas canciones y teorías.
+                </p>
+                <time class="text-sm text-base-content/60"
+                  >15 de Enero, 19:00 hrs</time
+                >
+              </div>
+
+              <div class="p-4 bg-base-100 rounded-lg">
+                <h3 class="font-semibold text-base-content">
+                  Maratón de Canciones
+                </h3>
+                <p class="text-base-content/80">
+                  Escuchamos y analizamos el álbum completo.
+                </p>
+                <time class="text-sm text-base-content/60"
+                  >28 de Enero, 15:00 hrs</time
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actividades Regulares -->
+        <div class="card bg-base-200 shadow-xl">
+          <div class="card-body">
+            <h2 class="card-title text-base-content">Actividades Regulares</h2>
+            <ul class="space-y-4">
+              <li class="flex gap-3 items-start">
+                <span class="text-2xl">🎵</span>
+                <div>
+                  <h3 class="font-semibold text-base-content">
+                    Club de Teorías
+                  </h3>
+                  <p class="text-base-content/80">
+                    Todos los martes compartimos y discutimos teorías sobre la
+                    historia.
+                  </p>
+                </div>
+              </li>
+              <li class="flex gap-3 items-start">
+                <span class="text-2xl">🎨</span>
+                <div>
+                  <h3 class="font-semibold text-base-content">
+                    Taller de Fan Art
+                  </h3>
+                  <p class="text-base-content/80">
+                    Jueves creativos donde compartimos nuestras creaciones.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calendario -->
+      <div class="mt-12 card bg-base-200 shadow-xl">
+        <div class="card-body">
+          <h2 class="card-title text-base-content">
+            Calendario de Actividades
+          </h2>
+          <p class="text-base-content/80">
+            Próximamente: Calendario interactivo con todas nuestras actividades.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <Footer />
+</Layout>
+<style>
+  #chile-map {
+    background: hsl(var(--b1));
+    border-radius: 1rem;
+    padding: 15px;
+    display: flex; /* Asegura que el contenido esté centrado */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+  }
+
+  object {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 100%; /* Ocupa todo el alto disponible */
+    background: transparent;
+  }
+</style>
+<script>
+  let activeRegion = null;
+
+  const regionData = {
+    "CH-RM": {
+      // ID para Región Metropolitana
+      name: "Región Metropolitana",
+      activities: [
+        {
+          name: "Reunión Mensual",
+          date: "15 de Enero, 19:00",
+          location: "Santiago Centro",
+        },
+        {
+          name: "Taller de Fanart",
+          date: "Todos los jueves",
+          location: "Ñuñoa",
+        },
+      ],
+    },
+    "CH-VALPARAISO": {
+      // ID para Valparaíso
+      name: "Región de Valparaíso",
+      activities: [
+        {
+          name: "Club de Teorías",
+          date: "Martes 20:00",
+          location: "Viña del Mar",
+        },
+      ],
+    },
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const mapObject = document.querySelector("object");
+    const infoDiv = document.getElementById("region-info");
+
+    mapObject?.addEventListener("load", () => {
+      const svgDoc = mapObject.contentDocument;
+
+      // Select all paths (regions)
+      const regions = svgDoc.querySelectorAll("path");
+      console.log("Regions found:", regions);
+
+      regions.forEach((region) => {
+        region.addEventListener("click", (e) => {
+          const regionId = e.target.id;
+          updateRegionInfo(regionId);
+          console.log("Region ID:", regionId);
+
+          // Reset previous active region
+          if (activeRegion) {
+            svgDoc.getElementById(activeRegion).style.fill = "";
+            console.log(
+              "colo nuevo:",
+              svgDoc.getElementById(activeRegion).style.fill
+            );
+          }
+
+          // Set new active region
+          activeRegion = regionId;
+          e.target.style.fill = "hsl(var(--p))";
+          console.log(e.target.style.fill);
+        });
+      });
+
+      const svgElement = svgDoc.querySelector("svg"); // Selecciona el elemento <svg>
+
+      if (svgElement) {
+        svgElement.style.transform = "scale(1.3)"; // Aplica la escala
+        svgElement.style.transformOrigin = "center"; // Asegura que la escala sea desde el centro
+      }
+    });
+
+    function updateRegionInfo(regionId) {
+      const region = regionData[regionId];
+      if (!region) {
+        infoDiv.innerHTML = `
+          <p class="text-base-content/80">Próximamente actividades en esta región.</p>
+        `;
+        return;
+      }
+
+      let activitiesHtml = region.activities
+        .map(
+          (activity) => `
+        <div class="mb-3">
+          <h4 class="font-semibold">${activity.name}</h4>
+          <p class="text-sm text-base-content/80">${activity.date}</p>
+          <p class="text-sm text-base-content/80">${activity.location}</p>
+        </div>
+      `
+        )
+        .join("");
+
+      infoDiv.innerHTML = `
+        <h3 class="font-bold mb-4">${region.name}</h3>
+        ${activitiesHtml}
+      `;
+    }
+  });
+</script>
