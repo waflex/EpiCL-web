@@ -11,6 +11,8 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.0.14",
     "astro": "^5.5.2",
+    "astro-cloudinary": "^1.1.0",
+    "cloudinary": "^1.41.3",
     "daisyui": "^5.0.4",
     "epicl-web": "file:",
     "tailwindcss": "^4.0.14"

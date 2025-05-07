@@ -1,0 +1,19 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Uncomment and use these lines if you want to set the Cloudinary variables directly in this file
+# [context.production.environment]
+#   PUBLIC_CLOUDINARY_CLOUD_NAME = "dkgtk7ear"
+#   CLOUDINARY_API_KEY = "172115333686945"
+#   CLOUDINARY_API_SECRET = "7hcNhOW6tVfYXvhZM6LRsSVkSg0"
+
+# No plugins needed for Astro
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
