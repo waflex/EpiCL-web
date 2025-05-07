@@ -1,9 +1,9 @@
 ---
-import Footer from "../components/Footer.astro";
-import Navbar from "../components/Navbar.astro";
-import Layout from "../layouts/Layout.astro";
-import "./../css/tailwind.css";
-import "./../css/Index.css";
+import Footer from "@components/Footer.astro";
+import Navbar from "@components/Navbar.astro";
+import Layout from "@layouts/Layout.astro";
+import "@styles/tailwind.css";
+import "@styles/Index.css";
 ---
 
 <Layout>
@@ -155,7 +155,7 @@ import "./../css/Index.css";
 </style>
 
 <script>
-  let activeRegion = null;
+let activeRegion: string | null = null;
 
   const regionData = {
     "CL-AI":{},
@@ -209,18 +209,21 @@ import "./../css/Index.css";
       const svgDoc = mapObject.contentDocument;
 
       // Select all paths (regions)
-      const regions = svgDoc.querySelectorAll("path");
+      const regions = svgDoc?.querySelectorAll("path") ?? [];
       console.log("Regions found:", regions);
 
       regions.forEach((region) => {
         region.addEventListener("click", (e) => {
-          const regionId = e.target.id;
+          const regionId = (e.target as SVGPathElement)?.id;
           updateRegionInfo(regionId);
           console.log("Region ID:", regionId);
 
           // Reset previous active region
           if (activeRegion) {
-            svgDoc.getElementById(activeRegion).style.fill = "";
+            const previousRegion = svgDoc.getElementById(activeRegion);
+            if (previousRegion) {
+              previousRegion.style.fill = "";
+            }
             console.log(
               "colo nuevo:",
               svgDoc.getElementById(activeRegion).style.fill

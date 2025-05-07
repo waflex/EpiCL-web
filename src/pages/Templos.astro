@@ -1,0 +1,34 @@
+---
+import Footer from "@components/Footer.astro";
+import Navbar from "@components/Navbar.astro";
+import Layout from "@layouts/Layout.astro";
+import "@styles/tailwind.css";
+import "@styles/Index.css";
+// Usa import.meta.glob para buscar archivos en la carpeta "templos"
+const templos = import.meta.glob('../pages/templos/*.astro');
+
+// Extrae los nombres de los templos a partir de las rutas
+const templosLinks = Object.keys(templos).map((path) => {
+  const name = path.split('/').pop().replace('.astro', '');
+  return { name, path: `/templos/${name}` };
+});
+---
+
+<Layout title="Templos">
+  <Navbar />
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-semibold mb-4">Templos</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {templosLinks.map((templo) => (
+        <div class="bg-white rounded-lg shadow-md p-4 text-black">
+          <h2 class="text-xl font-semibold mb-2">{templo.name}</h2>
+          <p class="text-gray-600 mb-4">Descripción del templo</p>
+          <img src={`/templos/${templo.name}.jpg`} alt={templo.name} class="w-full h-40 object-cover rounded-md mb-4" />
+          <a href={templo.path} class="text-blue-500 hover:underline">Ver más</a>
+        </div>
+      ))}
+
+    </div>
+  </div>
+  <Footer />
+</Layout>

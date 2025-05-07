@@ -1,43 +1,166 @@
 ---
-import Footer from "../../components/Footer.astro";
-import Navbar from "../../components/Navbar.astro";
-import Layout from "../../layouts/Layout.astro";
-import "./../../css/tailwind.css";
-import "./../../css/Index.css";
+import Footer from "@components/Footer.astro";
+import Navbar from "@components/Navbar.astro";
+import Layout from "@layouts/Layout.astro";
+import "@styles/tailwind.css";
+import "@styles/Index.css";
 ---
 
 <Layout>
   <Navbar />
   <div class="container mx-auto px-4 py-8">
-    <div class="bg-white rounded-lg shadow-lg p-6">
-      <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Templo de Athenea</h1>
+    <div class="bg-[#1a2a57] rounded-lg shadow-lg p-6 border-2 border-[#0d1b3a]">
+      <h1 class="text-3xl font-bold mb-6 text-center text-[#e0e7ff]">Templo de Atenea</h1>
       
       <div class="flex flex-col md:flex-row gap-8">
         <div class="md:w-1/2">
           <img
-            src="https://picsum.photos/800/602"
-            alt="Templo de Athenea"
-            class="rounded-lg w-full h-[400px] object-cover shadow-md"
+            src="https://picsum.photos/400/300"
+            alt="Templo de Atenea"
+            class="rounded-lg w-full h-[400px] object-fill shadow-md border-2 border-[#3b5998]"
           />
         </div>
         
         <div class="md:w-1/2 space-y-6">
-          <div class="bg-gray-50 p-6 rounded-lg">
-            <h2 class="text-xl font-semibold text-gray-800 mb-3">Sobre el Templo</h2>
-            <p class="text-gray-700">
-              [Aquí va la descripción del templo y su significado en Epic: The Musical]
+          <div class="bg-[#2c3e67] p-6 rounded-lg border border-[#3b5998]">
+            <h2 class="text-xl font-semibold text-[#a5c0ff] mb-3">Sobre el Templo</h2>
+            <p class="text-gray-200">
+              ¿Te gusta la literatura? ¡El templo de Atenea te espera! Este espacio está dedicado a los amantes de las letras, la escritura creativa y las buenas historias.
             </p>
           </div>
           
-          <div class="bg-gray-50 p-6 rounded-lg">
-            <h2 class="text-xl font-semibold text-gray-800 mb-3">Características</h2>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
-              <li>Característica 1</li>
-              <li>Característica 2</li>
-              <li>Característica 3</li>
+          <div class="bg-[#2c3e67] p-6 rounded-lg border border-[#3b5998]">
+            <h2 class="text-xl font-semibold text-[#a5c0ff] mb-3">Lo que encontrarás aquí</h2>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-gray-200">
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-[#0d1b3a] rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="#a5c0ff" d="M21,5c-1.11-0.35-2.33-0.5-3.5-0.5c-1.95,0-4.05,0.4-5.5,1.5c-1.45-1.1-3.55-1.5-5.5-1.5S2.45,4.9,1,6v14.65 c0,0.25,0.25,0.5,0.5,0.5c0.1,0,0.15-0.05,0.25-0.05C3.1,20.45,5.05,20,6.5,20c1.95,0,4.05,0.4,5.5,1.5c1.35-0.85,3.8-1.5,5.5-1.5 c1.65,0,3.35,0.3,4.75,1.05c0.1,0.05,0.15,0.05,0.25,0.05c0.25,0,0.5-0.25,0.5-0.5V6C22.4,5.55,21.75,5.25,21,5z M21,18.5 c-1.1-0.35-2.3-0.5-3.5-0.5c-1.7,0-4.15,0.65-5.5,1.5V8c1.35-0.85,3.8-1.5,5.5-1.5c1.2,0,2.4,0.15,3.5,0.5V18.5z"/>
+                  </svg>
+                </div>
+                Retos de escritura diarios
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-[#0d1b3a] rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="#a5c0ff" d="M12,17.27L18.18,21l-1.64-7.03L22,9.24l-7.19-0.61L12,2L9.19,8.63L2,9.24l5.46,4.73L5.82,21L12,17.27z"/>
+                  </svg>
+                </div>
+                Recomendaciones literarias
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-[#0d1b3a] rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="#a5c0ff" d="M20,2H4C2.9,2,2,2.9,2,4v18l4-4h14c1.1,0,2-0.9,2-2V4C22,2.9,21.1,2,20,2z M13.57,11.57L12,15l-1.57-3.43 L7,10l3.43-1.57L12,5l1.57,3.43L17,10L13.57,11.57z"/>
+                  </svg>
+                </div>
+                Crítica constructiva
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-[#0d1b3a] rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="#a5c0ff" d="M20,2H4C2.9,2,2,2.9,2,4v18l4-4h14c1.1,0,2-0.9,2-2V4C22,2.9,21.1,2,20,2z M9,11H7V9h2V11z M13,11h-2V9h2V11z M17,11h-2V9h2V11z"/>
+                  </svg>
+                </div>
+                Discord a disposición
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-[#0d1b3a] rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="#a5c0ff" d="M12,3L1,9l4,2.18v6L12,21l7-3.82v-6l2-1.09V17h2V9L12,3z M18.82,9L12,12.72L5.18,9L12,5.28L18.82,9z M17,15.99l-5,2.73l-5-2.73v-3.72L12,15l5-2.73V15.99z"/>
+                  </svg>
+                </div>
+                Epic-referencias
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-[#0d1b3a] rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="#a5c0ff" d="M12,2C6.48,2,2,6.48,2,12c0,5.52,4.48,10,10,10s10-4.48,10-10C22,6.48,17.52,2,12,2z M8.5,8C9.33,8,10,8.67,10,9.5 S9.33,11,8.5,11S7,10.33,7,9.5S7.67,8,8.5,8z M12,18c-2.28,0-4.22-1.66-5-4h10C16.22,16.34,14.28,18,12,18z M15.5,11 c-0.83,0-1.5-0.67-1.5-1.5S14.67,8,15.5,8S17,8.67,17,9.5S16.33,11,15.5,11z"/>
+                  </svg>
+                </div>
+                Rol-play (siempre a modo de broma)
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-[#0d1b3a] rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="#a5c0ff" d="M21,6h-2v9H6v2c0,0.55,0.45,1,1,1h11l4,4V7C22,6.45,21.55,6,21,6z M17,12V3c0-0.55-0.45-1-1-1H3 C2.45,2,2,2.45,2,3v14l4-4h10C16.55,13,17,12.55,17,12z"/>
+                  </svg>
+                </div>
+                Temas de conversación divertidos
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-[#0d1b3a] rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="#a5c0ff" d="M16,11c1.66,0,2.99-1.34,2.99-3S17.66,5,16,5c-1.66,0-3,1.34-3,3S14.34,11,16,11z M8,11 c1.66,0,2.99-1.34,2.99-3S9.66,5,8,5C6.34,5,5,6.34,5,8S6.34,11,8,11z M8,13c-2.33,0-7,1.17-7,3.5V19h14v-2.5 C15,14.17,10.33,13,8,13z M16,13c-0.29,0-0.62,0.02-0.97,0.05c1.16,0.84,1.97,1.97,1.97,3.45V19h6v-2.5C23,14.17,18.33,13,16,13z"/>
+                  </svg>
+                </div>
+                Comunidad literaria
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-[#0d1b3a] rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="#a5c0ff" d="M11.99,2C6.47,2,2,6.48,2,12s4.47,10,9.99,10C17.52,22,22,17.52,22,12S17.52,2,11.99,2z M12,20 c-4.42,0-8-3.58-8-8s3.58-8,8-8s8,3.58,8,8S16.42,20,12,20z M15.5,11c0.83,0,1.5-0.67,1.5-1.5S16.33,8,15.5,8S14,8.67,14,9.5 S14.67,11,15.5,11z M8.5,11c0.83,0,1.5-0.67,1.5-1.5S9.33,8,8.5,8S7,8.67,7,9.5S7.67,11,8.5,11z M12,17.5c2.33,0,4.31-1.46,5.11-3.5 H6.89C7.69,16.04,9.67,17.5,12,17.5z"/>
+                  </svg>
+                </div>
+                Una olímpica divertida
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-[#0d1b3a] rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="#a5c0ff" d="M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,6c1.93,0,3.5,1.57,3.5,3.5 S13.93,13,12,13s-3.5-1.57-3.5-3.5S10.07,6,12,6z M12,20c-2.03,0-4.43-0.82-6.14-2.88C7.55,15.8,9.68,15,12,15 s4.45,0.8,6.14,2.12C16.43,19.18,14.03,20,12,20z"/>
+                  </svg>
+                </div>
+                Sacerdotisas para darte la bienvenida
+              </li>
             </ul>
           </div>
+          
+          <div class="bg-[#0d1b3a] p-4 rounded-lg text-center">
+            <a href="#" class="btn bg-[#3b5998] hover:bg-[#4a69ad] border-none text-white">
+              Únete a nuestro servidor de Discord
+            </a>
+          </div>
         </div>
+      </div>
+      
+      <!-- Sección adicional para actividades literarias -->
+      <div class="mt-8 bg-[#2c3e67] p-6 rounded-lg border border-[#3b5998]">
+        <h2 class="text-2xl font-semibold text-[#a5c0ff] mb-4 text-center">Actividades Literarias</h2>
+        <div class="flex flex-col md:flex-row items-center gap-6">
+          <div class="md:w-1/3">
+            <img 
+              src="https://picsum.photos/400/300" 
+              alt="Actividades Literarias" 
+              class="rounded-lg w-full object-cover shadow-md border-2 border-[#3b5998]"
+            />
+          </div>
+          <div class="md:w-2/3">
+            <p class="text-gray-200 mb-4">
+              En el Templo de Atenea organizamos diversas actividades para fomentar la creatividad literaria. Desde retos de escritura diarios hasta sesiones de lectura compartida, nuestro objetivo es crear un espacio donde puedas desarrollar tus habilidades y compartir tu pasión por las letras con otros entusiastas.
+            </p>
+            <div class="bg-[#1a2a57] p-4 rounded-lg">
+              <h3 class="text-lg font-semibold text-[#a5c0ff] mb-2">Próximos eventos:</h3>
+              <ul class="space-y-2">
+                <li class="flex items-center gap-2 text-gray-200">
+                  <div class="w-2 h-2 rounded-full bg-[#3b5998]"></div>
+                  Club de lectura mensual
+                </li>
+                <li class="flex items-center gap-2 text-gray-200">
+                  <div class="w-2 h-2 rounded-full bg-[#3b5998]"></div>
+                  Taller de escritura creativa
+                </li>
+                <li class="flex items-center gap-2 text-gray-200">
+                  <div class="w-2 h-2 rounded-full bg-[#3b5998]"></div>
+                  Concurso de microrrelatos
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-6 text-center text-[#a5c0ff] font-semibold">
+        <p>¡Te esperamos!</p>
       </div>
     </div>
   </div>
