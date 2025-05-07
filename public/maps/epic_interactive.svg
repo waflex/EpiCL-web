@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1000 1000"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Central logo -->
+  <!-- Replace 'Epic_Center.png' with your central community logo SVG or PNG -->
+  <image href="Epic_Center.png" x="200" y="200" width="600" height="600"/>
+  
+  <!-- Outer icons group -->
+  <!-- Each icon is placed at radius 450px from center (500,500) and rotated by 30° increments -->
+  
+  <!-- Templo 1 (0°) -->
+  <a xlink:href="/templos/templo1">
+    <g transform="translate(500,500) rotate(0)">
+      <!-- Replace 'icon1.svg' with your first temple icon -->
+      <image href="icon1.svg" x="-40" y="-450" width="80" height="80"/>
+    </g>
+  </a>
+  
+  <!-- Templo 2 (30°) -->
+  <a xlink:href="/templos/templo2">
+    <g transform="translate(500,500) rotate(30)">
+      <image href="icon2.svg" x="-40" y="-450" width="80" height="80"/>
+    </g>
+  </a>
+  
+  <!-- Templo 3 (60°) -->
+  <a xlink:href="/templos/templo3">
+    <g transform="translate(500,500) rotate(60)">
+      <image href="icon3.svg" x="-40" y="-450" width="80" height="80"/>
+    </g>
+  </a>
+  
+  <!-- Templo 4 (90°) -->
+  <a xlink:href="/templos/templo4">
+    <g transform="translate(500,500) rotate(90)">
+      <image href="icon4.svg" x="-40" y="-450" width="80" height="80"/>
+    </g>
+  </a>
+  
+  <!-- Templo 5 (120°) -->
+  <a xlink:href="/templos/templo5">
+    <g transform="translate(500,500) rotate(120)">
+      <image href="icon5.svg" x="-40" y="-450" width="80" height="80"/>
+    </g>
+  </a>
+  
+  <!-- Templo 6 (150°) -->
+  <a xlink:href="/templos/templ6">
+    <g transform="translate(500,500) rotate(150)">
+      <image href="icon6.svg" x="-40" y="-450" width="80" height="80"/>
+    </g>
+  </a>
+  
+  <!-- Templo 7 (180°) -->
+  <a xlink:href="/templos/templo7">
+    <g transform="translate(500,500) rotate(180)">
+      <image href="icon7.svg" x="-40" y="-450" width="80" height="80"/>
+    </g>
+  </a>
+  
+  <!-- Templo 8 (210°) -->
+  <a xlink:href="/templos/templo8">
+    <g transform="translate(500,500) rotate(210)">
+      <image href="icon8.svg" x="-40" y="-450" width="80" height="80"/>
+    </g>
+  </a>
+  
+  <!-- Templo 9 (240°) -->
+  <a xlink:href="/templos/templo9">
+    <g transform="translate(500,500) rotate(240)">
+      <image href="icon9.svg" x="-40" y="-450" width="80" height="80"/>
+    </g>
+  </a>
+  
+  <!-- Templo 10 (270°) -->
+  <a xlink:href="/templos/templo10">
+    <g transform="translate(500,500) rotate(270)">
+      <image href="icon10.svg" x="-40" y="-450" width="80" height="80"/>
+    </g>
+  </a>
+  
+  <!-- Templo 11 (300°) -->
+  <a xlink:href="/templos/templo11">
+    <g transform="translate(500,500) rotate(300)">
+      <image href="icon11.svg" x="-40" y="-450" width="80" height="80"/>
+    </g>
+  </a>
+  
+  <!-- Templo 12 (330°) -->
+  <a xlink:href="/templos/templo12">
+    <g transform="translate(500,500) rotate(330)">
+      <image href="icon12.svg" x="-40" y="-450" width="80" height="80"/>
+    </g>
+  </a>
+</svg>

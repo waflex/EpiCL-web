@@ -1,0 +1,8 @@
+# Normaliza todos los archivos de texto a LF en el repositorio
+* text=auto
+
+# Fuerza LF en scripts
+*.sh text eol=lf
+
+# Fuerza CRLF en archivos de Windows (si es necesario)
+*.bat text eol=crlf
