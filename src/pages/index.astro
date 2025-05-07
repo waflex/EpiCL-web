@@ -3,9 +3,9 @@ import { Image } from "astro:assets";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
-import Junta from "../Img/Grupo_Santiago.jpg";
-import "@/css/tailwind.css";
-import "@/css/index.css";
+import Junta from "../Img/Grupo_Santiago.jpg"
+import "./../css/tailwind.css";
+import "./../css/index.css";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -22,19 +22,15 @@ import "@/css/index.css";
           <h1 class="text-4xl md:text-5xl font-bold text-base-content mb-6">
             Bienvenidos al Fan Club de Epic: The Musical en Chile 🎭⚡
           </h1>
-
-          <div class="prose prose-lg font-sans">
+          
+          <div class="prose prose-lg">
             <p class="text-lg text-base-content/80">
-              Si Epic: The Musical ha conquistado tu corazón con su historia
-              épica, su música poderosa y su visión única de La Odisea, ¡has
-              llegado al lugar indicado!
+              Si Epic: The Musical ha conquistado tu corazón con su historia épica, su música poderosa y su visión única de La Odisea, ¡has llegado al lugar indicado!
             </p>
-
+            
             <div class="my-8 p-6 bg-base-200 rounded-lg shadow-lg">
-              <h2 class="text-2xl font-semibold mb-4 text-base-content">
-                ¿Qué encontrarás aquí? 🌟
-              </h2>
-              <ul class="space-y-4 font-sans">
+              <h2 class="text-2xl font-semibold mb-4 text-base-content">¿Qué encontrarás aquí? 🌟</h2>
+              <ul class="space-y-4">
                 <li class="flex items-center gap-3 text-base-content/80">
                   <span>🎵</span>
                   Análisis de canciones y teorías
@@ -65,14 +61,12 @@ import "@/css/index.css";
         <!-- Image Section -->
         <div class="lg:w-1/2 px-4 md:px-0">
           <div class="relative">
-            <Image
+            <Image 
               src={Junta}
-              alt="Epic: The Musical"
+              alt="Epic: The Musical" 
               class="rounded-lg shadow-2xl w-full object-cover"
             />
-            <div
-              class="absolute -bottom-4 -right-4 bg-primary text-white p-4 rounded-lg shadow-lg"
-            >
+            <div class="absolute -bottom-4 -right-4 bg-primary text-white p-4 rounded-lg shadow-lg">
               <p class="text-lg font-bold">#OdysseyAwaits</p>
             </div>
           </div>
@@ -81,35 +75,25 @@ import "@/css/index.css";
 
       <!-- Featured Section -->
       <div class="mt-24 grid md:grid-cols-3 gap-8 px-4 md:px-0">
-        <div class="card bg-base-200 shadow-xl overflow-hidden">
-          <div class="card-body p-0">
-            <iframe
-              src="https://discordapp.com/widget?id=641330262231482368&theme=dark"
-              width="100%"
-              height="300"
-              allowtransparency="true"
-              frameborder="0"
-              class="rounded-xl"
-              sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-            ></iframe>
+        <div class="card bg-base-200 shadow-xl">
+          <div class="card-body">
+            <h2 class="card-title text-base-content">Últimas Noticias 📰</h2>
+            <p class="text-base-content/80">Mantente al día con las últimas actualizaciones del musical y nuestra comunidad.</p>
           </div>
         </div>
+
         <div class="card bg-base-200 shadow-xl">
           <div class="card-body">
             <h2 class="card-title text-base-content">Galería de Fans 🎨</h2>
-            <p class="text-base-content/80 font-sans">
-              Explora las increíbles creaciones de nuestra talentosa comunidad.
-            </p>
+            <p class="text-base-content/80">Explora las increíbles creaciones de nuestra talentosa comunidad.</p>
           </div>
         </div>
 
         <div class="card bg-base-200 shadow-xl">
           <div class="card-body">
             <h2 class="card-title text-base-content">Eventos 🎉</h2>
-            <p class="text-base-content/80 font-sans">
-              <a href="/actividades" class="link link-hover"
-                >Descubre nuestros próximos encuentros y actividades especiales.</a
-              >
+            <p class="text-base-content/80">
+              <a href="/actividades" class="link link-hover">Descubre nuestros próximos encuentros y actividades especiales.</a>
             </p>
           </div>
         </div>
