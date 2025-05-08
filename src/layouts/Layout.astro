@@ -1,34 +1,110 @@
 <!doctype html>
 <html lang="es">
   <head>
+    <!-- Charset & Viewport -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
 
-    <!-- Metaetiquetas básicas -->
-    <title>Epic The Musical - Comunidad de Fans en Chile</title>
-    <meta name="description" content="Únete a la comunidad oficial de fans de Epic The Musical en Chile. Descubre actividades, eventos y contenido exclusivo sobre este increíble musical." />
-    <meta name="keywords" content="Epic The Musical, Musical, Chile, Comunidad de Fans, Actividades, Eventos, Fan Club, Música, Teatro" />
-    <meta name="author" content="Epic The Musical - Chile" />
-    <meta name="theme-color" content="#000000" />
+    <!-- Favicon & Manifest -->
+    <link rel="icon" type="image/svg+xml" href="/Img/Epic_Logo.svg" />
+    <link rel="alternate icon" href="/Img/Epic_Logo.png" sizes="32x32" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- Metaetiquetas para redes sociales (Open Graph) -->
-    <meta property="og:title" content="Epic The Musical - Comunidad de Fans en Chile" />
-    <meta property="og:description" content="Descubre actividades, eventos y contenido exclusivo sobre Epic The Musical. Únete a nuestra comunidad en Chile." />
-    <meta property="og:image" content="/images/epic-banner.jpg" />
-    <meta property="og:url" content="https://www.epicchile.com" />
+    <!-- Preconnect & Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Meta básicas -->
+    <title>Epic The Musical – Comunidad Oficial de Fans en Chile</title>
+    <meta
+      name="description"
+      content="Únete a la comunidad oficial de Epic The Musical en Chile. Participa en eventos, actividades y contenido exclusivo para fans."
+    />
+    <meta
+      name="keywords"
+      content="Epic The Musical, fans Chile, musical, teatro, comunidad, eventos, fan club"
+    />
+    <meta name="author" content="Epic The Musical – Chile" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#1a202c" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.epicchile.com/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:locale" content="es_CL" />
     <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Epic The Musical – Comunidad Oficial de Fans en Chile"
+    />
+    <meta
+      property="og:description"
+      content="Únete a la comunidad oficial de Epic The Musical en Chile. Participa en eventos, actividades y contenido exclusivo para fans."
+    />
+    <meta property="og:url" content="https://www.epicchile.com/" />
+    <meta property="og:site_name" content="Epic The Musical Chile" />
+    <meta
+      property="og:image"
+      content="https://www.epicchile.com/Img/Epic_Logo.png"
+    />
+    <meta property="og:image:alt" content="Logo Epic The Musical Chile" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
-    <!-- Metaetiquetas para Twitter -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Epic The Musical - Comunidad de Fans en Chile" />
-    <meta name="twitter:description" content="Únete a la comunidad oficial de fans de Epic The Musical en Chile. Descubre actividades, eventos y contenido exclusivo." />
-    <meta name="twitter:image" content="/images/epic-banner.jpg" />
+    <meta name="twitter:site" content="@EpicMusicalCL" />
+    <meta name="twitter:creator" content="@EpicMusicalCL" />
+    <meta
+      name="twitter:title"
+      content="Epic The Musical – Comunidad Oficial de Fans en Chile"
+    />
+    <meta
+      name="twitter:description"
+      content="Únete a la comunidad oficial de Epic The Musical en Chile. Participa en eventos, actividades y contenido exclusivo para fans."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.epicchile.com/Img/Epic_Logo.png"
+    />
+    <meta name="twitter:image:alt" content="Logo Epic The Musical Chile" />
 
-    <!-- Metaetiquetas adicionales -->
-    <link rel="canonical" href="https://www.epicchile.com" />
+    <!-- Progressive Web App & Theme -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Epic The Musical CL" />
+    <link rel="apple-touch-icon" href="/Img/Epic_Logo.png" />
+
+    <!-- Analytics (ejemplo con Google Analytics 4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX", { send_page_view: true });
+    </script>
+
+    <!-- Generador de Astro -->
+    <meta name="generator" content={Astro.generator} />
   </head>
+
   <body>
     <slot />
   </body>
