@@ -2,41 +2,153 @@
 import Footer from "@components/Footer.astro";
 import Navbar from "@components/Navbar.astro";
 import Layout from "@layouts/Layout.astro";
+import BtnDiscord from "@components/BtnDiscord.astro";
 import "@styles/tailwind.css";
 import "@styles/Index.css";
 ---
 <Layout>
   <Navbar />
   <div class="container mx-auto px-4 py-8">
-    <div class="bg-white rounded-lg shadow-lg p-6">
-      <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Templo de Hestia</h1>
+    <div class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-lg shadow-lg p-6 border-2 border-red-300">
+      <h1 class="text-3xl font-bold text-red-700 mb-6 text-center">Templo de Hestia</h1>
       
       <div class="flex flex-col md:flex-row gap-8">
         <div class="md:w-1/2">
           <img
-            src="https://picsum.photos/800/606"
+            src="/Img/Logo_Hestia.webp"
             alt="Templo de Hestia"
-            class="rounded-lg w-full h-[400px] object-cover shadow-md"
+            class="rounded-lg w-full h-[400px] object-fill shadow-md border-2 border-amber-400"
           />
         </div>
         
         <div class="md:w-1/2 space-y-6">
-          <div class="bg-gray-50 p-6 rounded-lg">
-            <h2 class="text-xl font-semibold text-gray-800 mb-3">Sobre el Templo</h2>
-            <p class="text-gray-700">
-              [Aquí va la descripción del templo y su significado en Epic: The Musical]
+          <div class="bg-amber-200 p-6 rounded-lg border border-amber-400">
+            <h2 class="text-xl font-semibold text-red-700 mb-3">Bienvenida de la Olímpica</h2>
+            <p class="text-red-800">
+              Bienvenidos sean al templo de la cocina... HESTIA
+              <br><br>
+              Soy nani, la olímpica de este lugar
+              <br><br>
+              Sin más que decir, puedes venir y divertirte en hestia
             </p>
           </div>
           
-          <div class="bg-gray-50 p-6 rounded-lg">
-            <h2 class="text-xl font-semibold text-gray-800 mb-3">Características</h2>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
-              <li>Característica 1</li>
-              <li>Característica 2</li>
-              <li>Característica 3</li>
+          <div class="bg-amber-200 p-6 rounded-lg border border-amber-400">
+            <h2 class="text-xl font-semibold text-red-700 mb-3">Lo que encontrarás aquí</h2>
+            <ul class="grid grid-cols-1 gap-3 text-red-800">
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-red-600 rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="#fef3c7" d="M12,3C8.5,3 5.1,4.4 2.4,7.1L3.8,8.5C6.1,6.2 9,5 12,5C15,5 17.9,6.2 20.2,8.5L21.6,7.1C18.9,4.4 15.5,3 12,3M12,8C9.8,8 7.6,8.8 5.9,10.5L7.3,11.9C8.6,10.6 10.2,10 12,10C13.8,10 15.4,10.6 16.7,11.9L18.1,10.5C16.4,8.8 14.2,8 12,8M12,13C10.9,13 9.8,13.4 9,14.1L12,17.1L15,14.1C14.2,13.4 13.1,13 12,13M8,18H16V21H8V18Z"/>
+                  </svg>
+                </div>
+                Postres
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-red-600 rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="#fef3c7" d="M8.1,13.34L3.91,9.16C2.35,7.59 2.35,5.06 3.91,3.5L10.93,10.5L8.1,13.34M14.88,11.53L13.41,13L20.29,19.88L18.88,21.29L12,14.41L5.12,21.29L3.71,19.88L13.47,10.12C12.76,8.59 13.26,6.44 14.85,4.85C16.76,2.93 19.5,2.57 20.96,4.03C22.43,5.5 22.07,8.24 20.15,10.15C18.56,11.74 16.41,12.24 14.88,11.53Z"/>
+                  </svg>
+                </div>
+                Comida diaria
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-red-600 rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="#fef3c7" d="M19,3V4H20V8H19V9H5V8H4V4H5V3H19M8,5V7H16V5H8M19,10V11H20V15H19V16H5V15H4V11H5V10H19M8,12V14H16V12H8M19,17V18H20V22H19V23H5V22H4V18H5V17H19M8,19V21H16V19H8Z"/>
+                  </svg>
+                </div>
+                Recetas
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-red-600 rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="#fef3c7" d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z"/>
+                  </svg>
+                </div>
+                Enseñanza culinaria
+              </li>
             </ul>
+          </div>          
+          <BtnDiscord bgColor="amber-200" btnColor="amber-400" btnHoverColor="amber-500" textColor="red-800" />
+        </div>
+      </div>
+      <!-- Sección adicional para recetas destacadas -->
+      <div class="mt-8 bg-amber-200 p-6 rounded-lg border border-amber-400">
+        <h2 class="text-2xl font-semibold text-red-700 mb-4 text-center">Recetas Destacadas</h2>
+        <div class="flex flex-col md:flex-row items-center gap-6">
+          <div class="md:w-1/3">
+            <img 
+              src="/Img/Presentacion_Hestia.webp" 
+              alt="Recetas Destacadas" 
+              class="rounded-lg w-full object-cover shadow-md border-2 border-amber-400"
+            />
+          </div>
+          <div class="md:w-2/3">
+            <p class="text-red-800 mb-4">
+              En el Templo de Hestia compartimos nuestras mejores recetas y trucos culinarios. Desde platos tradicionales hasta innovaciones gastronómicas, aquí encontrarás inspiración para tus comidas diarias y ocasiones especiales.
+            </p>
+            <div class="bg-amber-100 p-4 rounded-lg">
+              <h3 class="text-lg font-semibold text-red-700 mb-2">Próximos eventos:</h3>
+              <ul class="space-y-2">
+                <li class="flex items-center gap-2 text-red-800">
+                  <div class="w-2 h-2 rounded-full bg-red-600"></div>
+                  Taller de repostería casera
+                </li>
+                <li class="flex items-center gap-2 text-red-800">
+                  <div class="w-2 h-2 rounded-full bg-red-600"></div>
+                  Intercambio de recetas familiares
+                </li>
+                <li class="flex items-center gap-2 text-red-800">
+                  <div class="w-2 h-2 rounded-full bg-red-600"></div>
+                  Concurso mensual de cocina
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+      </div>
+      <!-- Sección de categorías de recetas -->
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-amber-100 p-4 rounded-lg shadow-md border border-amber-300">
+          <h3 class="text-lg font-semibold text-red-700 mb-2 text-center">Postres Deliciosos</h3>
+          <img 
+            src="/Img/Hestia_Postres.webp" 
+            alt="Postres" 
+            class="rounded-lg w-full h-40 object-cover mb-3"
+          />
+          <p class="text-red-800 text-sm">
+            Descubre nuestras recetas de postres, desde clásicos familiares hasta creaciones innovadoras que sorprenderán a todos.
+          </p>
+        </div>
+        
+        <div class="bg-amber-100 p-4 rounded-lg shadow-md border border-amber-300">
+          <h3 class="text-lg font-semibold text-red-700 mb-2 text-center">Comida Diaria</h3>
+          <img 
+            src="/Img/Hestia_Comida.webp" 
+            alt="Comida Diaria" 
+            class="rounded-lg w-full h-40 object-cover mb-3"
+          />
+          <p class="text-red-800 text-sm">
+            Ideas prácticas y deliciosas para tus comidas de cada día, con opciones rápidas y nutritivas para toda la familia.
+          </p>
+        </div>
+        
+        <div class="bg-amber-100 p-4 rounded-lg shadow-md border border-amber-300">
+          <h3 class="text-lg font-semibold text-red-700 mb-2 text-center">Aprende a Cocinar</h3>
+          <img 
+            src="/Img/Hestia_Aprende.webp" 
+            alt="Aprende a Cocinar" 
+            class="rounded-lg w-full h-40 object-cover mb-3"
+          />
+          <p class="text-red-800 text-sm">
+            ¿No sabes cocinar? ¡No hay problema! Aquí te enseñamos desde lo más básico hasta técnicas avanzadas de cocina.
+          </p>
+        </div>
+      </div>
+      
+      <div class="mt-6 text-center text-red-700 font-semibold">
+        <p>¡Ven y diviértete en el Templo de Hestia!</p>
       </div>
     </div>
   </div>

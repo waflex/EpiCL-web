@@ -2,15 +2,21 @@
 import Footer from "@components/Footer.astro";
 import Navbar from "@components/Navbar.astro";
 import Layout from "@layouts/Layout.astro";
+import BtnDiscord from "@components/BtnDiscord.astro";
 import "@styles/tailwind.css";
 import "@styles/Index.css";
 ---
+
 <Layout>
   <Navbar />
   <div class="container mx-auto px-4 py-8">
-    <div class="bg-[#0f172a] rounded-lg shadow-lg p-6 border-2 border-[#94a3b8]">
-      <h1 class="text-3xl font-bold text-[#cbd5e1] mb-6 text-center">Templo de Hécate</h1>
-      
+    <div
+      class="bg-[#0f172a] rounded-lg shadow-lg p-6 border-2 border-[#94a3b8]"
+    >
+      <h1 class="text-3xl font-bold text-[#cbd5e1] mb-6 text-center">
+        Templo de Hécate
+      </h1>
+
       <div class="flex flex-col md:flex-row gap-8">
         <div class="md:w-1/2">
           <img
@@ -19,94 +25,165 @@ import "@styles/Index.css";
             class="rounded-lg w-full h-[400px] object-fill shadow-md border-2 border-[#64748b]"
           />
         </div>
-        
+
         <div class="md:w-1/2 space-y-6">
           <div class="bg-[#1e293b] p-6 rounded-lg border border-[#64748b]">
-            <h2 class="text-xl font-semibold text-[#e2e8f0] mb-3">Sobre el Templo</h2>
+            <h2 class="text-xl font-semibold text-[#e2e8f0] mb-3">
+              Sobre el Templo
+            </h2>
             <p class="text-[#cbd5e1] font-sans">
-              Bienvenidxs queridxs sacerdotisas/sacerdotes al templo de Hécate!!! Este es un espacio dedicado a las artes místicas, el conocimiento esotérico y la exploración espiritual.
+              Bienvenidxs queridxs sacerdotisas/sacerdotes al templo de
+              Hécate!!! Este es un espacio dedicado a las artes místicas, el
+              conocimiento esotérico y la exploración espiritual.
             </p>
           </div>
-          
+
           <div class="bg-[#1e293b] p-6 rounded-lg border border-[#64748b]">
-            <h2 class="text-xl font-semibold text-[#e2e8f0] mb-3">H.E.C.A.T.E</h2>
+            <h2 class="text-xl font-semibold text-[#e2e8f0] mb-3">
+              H.E.C.A.T.E
+            </h2>
             <ul class="grid grid-cols-1 gap-3 text-[#cbd5e1]">
               <li class="flex items-center gap-3">
-                <div class="w-8 h-8 flex items-center justify-center bg-[#334155] rounded-full p-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
-                    <path fill="#94a3b8" d="M7,2C4,2 2,5 2,8C2,10.11 3,13 4,14C5,15 6,22 6,22H7V2M10,7V22H11V7H10M13,2V22H14V2H13M16,2C16,2 17,9 17,10C17,12 18,15 20,16C22,17 22,22 22,22H23V2H16Z"/>
+                <div
+                  class="w-8 h-8 flex items-center justify-center bg-[#334155] rounded-full p-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      fill="#94a3b8"
+                      d="M7,2C4,2 2,5 2,8C2,10.11 3,13 4,14C5,15 6,22 6,22H7V2M10,7V22H11V7H10M13,2V22H14V2H13M16,2C16,2 17,9 17,10C17,12 18,15 20,16C22,17 22,22 22,22H23V2H16Z"
+                    ></path>
                   </svg>
                 </div>
                 <span><strong class="text-[#e2e8f0]">H</strong>echizos</span>
               </li>
               <li class="flex items-center gap-3">
-                <div class="w-8 h-8 flex items-center justify-center bg-[#334155] rounded-full p-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
-                    <path fill="#94a3b8" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,10.5A1.5,1.5 0 0,0 10.5,12A1.5,1.5 0 0,0 12,13.5A1.5,1.5 0 0,0 13.5,12A1.5,1.5 0 0,0 12,10.5M7.5,10.5A1.5,1.5 0 0,0 6,12A1.5,1.5 0 0,0 7.5,13.5A1.5,1.5 0 0,0 9,12A1.5,1.5 0 0,0 7.5,10.5M16.5,10.5A1.5,1.5 0 0,0 15,12A1.5,1.5 0 0,0 16.5,13.5A1.5,1.5 0 0,0 18,12A1.5,1.5 0 0,0 16.5,10.5Z"/>
+                <div
+                  class="w-8 h-8 flex items-center justify-center bg-[#334155] rounded-full p-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      fill="#94a3b8"
+                      d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,10.5A1.5,1.5 0 0,0 10.5,12A1.5,1.5 0 0,0 12,13.5A1.5,1.5 0 0,0 13.5,12A1.5,1.5 0 0,0 12,10.5M7.5,10.5A1.5,1.5 0 0,0 6,12A1.5,1.5 0 0,0 7.5,13.5A1.5,1.5 0 0,0 9,12A1.5,1.5 0 0,0 7.5,10.5M16.5,10.5A1.5,1.5 0 0,0 15,12A1.5,1.5 0 0,0 16.5,13.5A1.5,1.5 0 0,0 18,12A1.5,1.5 0 0,0 16.5,10.5Z"
+                    ></path>
                   </svg>
                 </div>
                 <span><strong class="text-[#e2e8f0]">E</strong>soterismo</span>
               </li>
               <li class="flex items-center gap-3">
-                <div class="w-8 h-8 flex items-center justify-center bg-[#334155] rounded-full p-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
-                    <path fill="#94a3b8" d="M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L6.04,7.5L12,10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V9.21L13,12.58V19.29L19,15.91Z"/>
+                <div
+                  class="w-8 h-8 flex items-center justify-center bg-[#334155] rounded-full p-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      fill="#94a3b8"
+                      d="M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L6.04,7.5L12,10.85L17.96,7.5L12,4.15M5,15.91L11,19.29V12.58L5,9.21V15.91M19,15.91V9.21L13,12.58V19.29L19,15.91Z"
+                    ></path>
                   </svg>
                 </div>
                 <span><strong class="text-[#e2e8f0]">C</strong>ábala</span>
               </li>
               <li class="flex items-center gap-3">
-                <div class="w-8 h-8 flex items-center justify-center bg-[#334155] rounded-full p-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
-                    <path fill="#94a3b8" d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"/>
+                <div
+                  class="w-8 h-8 flex items-center justify-center bg-[#334155] rounded-full p-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      fill="#94a3b8"
+                      d="M12,15.39L8.24,17.66L9.23,13.38L5.91,10.5L10.29,10.13L12,6.09L13.71,10.13L18.09,10.5L14.77,13.38L15.76,17.66M22,9.24L14.81,8.63L12,2L9.19,8.63L2,9.24L7.45,13.97L5.82,21L12,17.27L18.18,21L16.54,13.97L22,9.24Z"
+                    ></path>
                   </svg>
                 </div>
-                <span><strong class="text-[#e2e8f0]">A</strong>strales (plano espiritual)</span>
+                <span
+                  ><strong class="text-[#e2e8f0]">A</strong>strales (plano
+                  espiritual)</span
+                >
               </li>
               <li class="flex items-center gap-3">
-                <div class="w-8 h-8 flex items-center justify-center bg-[#334155] rounded-full p-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
-                    <path fill="#94a3b8" d="M19.43,12.97L21.54,14.63C21.73,14.78 21.78,15.05 21.66,15.27L19.66,18.73C19.54,18.95 19.27,19.03 19.05,18.95L16.56,17.94C16.04,18.34 15.5,18.67 14.87,18.93L14.5,21.58C14.46,21.82 14.25,22 14,22H10C9.75,22 9.54,21.82 9.5,21.58L9.13,18.93C8.5,18.68 7.96,18.34 7.44,17.94L4.95,18.95C4.73,19.03 4.46,18.95 4.34,18.73L2.34,15.27C2.21,15.05 2.27,14.78 2.46,14.63L4.57,12.97C4.53,12.65 4.5,12.33 4.5,12C4.5,11.67 4.53,11.35 4.57,11.03L2.46,9.37C2.27,9.22 2.21,8.95 2.34,8.73L4.34,5.27C4.46,5.05 4.73,4.96 4.95,5.05L7.44,6.05C7.96,5.66 8.5,5.32 9.13,5.07L9.5,2.42C9.54,2.18 9.75,2 10,2H14C14.25,2 14.46,2.18 14.5,2.42L14.87,5.07C15.5,5.32 16.04,5.66 16.56,6.05L19.05,5.05C19.27,4.96 19.54,5.05 19.66,5.27L21.66,8.73C21.78,8.95 21.73,9.22 21.54,9.37L19.43,11.03C19.47,11.35 19.5,11.67 19.5,12C19.5,12.33 19.47,12.65 19.43,12.97M12,15C13.66,15 15,13.66 15,12C15,10.34 13.66,9 12,9C10.34,9 9,10.34 9,12C9,13.66 10.34,15 12,15Z"/>
+                <div
+                  class="w-8 h-8 flex items-center justify-center bg-[#334155] rounded-full p-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      fill="#94a3b8"
+                      d="M19.43,12.97L21.54,14.63C21.73,14.78 21.78,15.05 21.66,15.27L19.66,18.73C19.54,18.95 19.27,19.03 19.05,18.95L16.56,17.94C16.04,18.34 15.5,18.67 14.87,18.93L14.5,21.58C14.46,21.82 14.25,22 14,22H10C9.75,22 9.54,21.82 9.5,21.58L9.13,18.93C8.5,18.68 7.96,18.34 7.44,17.94L4.95,18.95C4.73,19.03 4.46,18.95 4.34,18.73L2.34,15.27C2.21,15.05 2.27,14.78 2.46,14.63L4.57,12.97C4.53,12.65 4.5,12.33 4.5,12C4.5,11.67 4.53,11.35 4.57,11.03L2.46,9.37C2.27,9.22 2.21,8.95 2.34,8.73L4.34,5.27C4.46,5.05 4.73,4.96 4.95,5.05L7.44,6.05C7.96,5.66 8.5,5.32 9.13,5.07L9.5,2.42C9.54,2.18 9.75,2 10,2H14C14.25,2 14.46,2.18 14.5,2.42L14.87,5.07C15.5,5.32 16.04,5.66 16.56,6.05L19.05,5.05C19.27,4.96 19.54,5.05 19.66,5.27L21.66,8.73C21.78,8.95 21.73,9.22 21.54,9.37L19.43,11.03C19.47,11.35 19.5,11.67 19.5,12C19.5,12.33 19.47,12.65 19.43,12.97M12,15C13.66,15 15,13.66 15,12C15,10.34 13.66,9 12,9C10.34,9 9,10.34 9,12C9,13.66 10.34,15 12,15Z"
+                    ></path>
                   </svg>
                 </div>
                 <span><strong class="text-[#e2e8f0]">T</strong>eurgia</span>
               </li>
               <li class="flex items-center gap-3">
-                <div class="w-8 h-8 flex items-center justify-center bg-[#334155] rounded-full p-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
-                    <path fill="#94a3b8" d="M9,3L7.17,5H4C2.9,5 2,5.9 2,7V19C2,20.1 2.9,21 4,21H20C21.1,21 22,20.1 22,19V7C22,5.9 21.1,5 20,5H16.83L15,3H9M12,18C9.24,18 7,15.76 7,13C7,10.24 9.24,8 12,8C14.76,8 17,10.24 17,13C17,15.76 14.76,18 12,18M12,17L13.25,14.25L16,13L13.25,11.75L12,9L10.75,11.75L8,13L10.75,14.25L12,17Z"/>
+                <div
+                  class="w-8 h-8 flex items-center justify-center bg-[#334155] rounded-full p-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      fill="#94a3b8"
+                      d="M9,3L7.17,5H4C2.9,5 2,5.9 2,7V19C2,20.1 2.9,21 4,21H20C21.1,21 22,20.1 22,19V7C22,5.9 21.1,5 20,5H16.83L15,3H9M12,18C9.24,18 7,15.76 7,13C7,10.24 9.24,8 12,8C14.76,8 17,10.24 17,13C17,15.76 14.76,18 12,18M12,17L13.25,14.25L16,13L13.25,11.75L12,9L10.75,11.75L8,13L10.75,14.25L12,17Z"
+                    ></path>
                   </svg>
                 </div>
-                <span><strong class="text-[#e2e8f0]">E</strong>studios de magia</span>
+                <span
+                  ><strong class="text-[#e2e8f0]">E</strong>studios de magia</span
+                >
               </li>
             </ul>
           </div>
-          
-          <div class="bg-[#334155] p-4 rounded-lg text-center">
-            <a href="#" class="btn bg-[#475569] hover:bg-[#64748b] border-none text-[#f1f5f9]">
-              Únete a nuestro círculo místico
-            </a>
-          </div>
+          <BtnDiscord
+            bgColor="[#334155]"
+            btnColor="[#475569]"
+            btnHoverColor="[#64748b]"
+            textColor="[#f1f5f9]"
+          />
         </div>
       </div>
-      
+
       <!-- Sección adicional para conocimientos místicos -->
       <div class="mt-8 bg-[#1e293b] p-6 rounded-lg border border-[#64748b]">
-        <h2 class="text-2xl font-semibold text-[#e2e8f0] mb-4 text-center">Conocimientos Místicos</h2>
+        <h2 class="text-2xl font-semibold text-[#e2e8f0] mb-4 text-center">
+          Conocimientos Místicos
+        </h2>
         <div class="flex flex-col md:flex-row items-center gap-6">
           <div class="md:w-1/3">
-            <img 
-              src="/Img/Presentacion_Hecate.webp" 
-              alt="Conocimientos Místicos" 
+            <img
+              src="/Img/Presentacion_Hecate.webp"
+              alt="Conocimientos Místicos"
               class="rounded-lg w-full object-cover shadow-md border-2 border-[#64748b]"
             />
           </div>
           <div class="md:w-2/3">
             <p class="text-[#cbd5e1] mb-4 font-sans">
-              Siéntete libre de compartir tu sabiduría y expresar tus dudas, que entre todos nos ayudamos. Además de siempre estar bajo el cuidado de nuestra brujita olímpica y sus dos manos derechas!
+              Siéntete libre de compartir tu sabiduría y expresar tus dudas, que
+              entre todos nos ayudamos. Además de siempre estar bajo el cuidado
+              de nuestra brujita olímpica y sus dos manos derechas!
             </p>
             <div class="bg-[#0f172a] p-4 rounded-lg">
-              <h3 class="text-lg font-semibold text-[#e2e8f0] mb-2">Actividades místicas:</h3>
+              <h3 class="text-lg font-semibold text-[#e2e8f0] mb-2">
+                Actividades místicas:
+              </h3>
               <ul class="space-y-2">
                 <li class="flex items-center gap-2 text-[#cbd5e1]">
                   <div class="w-2 h-2 rounded-full bg-[#94a3b8]"></div>
@@ -125,7 +202,7 @@ import "@styles/Index.css";
           </div>
         </div>
       </div>
-      
+
       <div class="mt-6 text-center text-[#e2e8f0] font-semibold">
         <p>Aquí... "Todxs somos Hécate"</p>
       </div>

@@ -2,6 +2,7 @@
 import Footer from "@components/Footer.astro";
 import Navbar from "@components/Navbar.astro";
 import Layout from "@layouts/Layout.astro";
+import BtnDiscord from "@components/BtnDiscord.astro";
 import "@styles/tailwind.css";
 import "@styles/Index.css";
 ---
@@ -131,15 +132,7 @@ import "@styles/Index.css";
               </li>
             </ul>
           </div>
-
-          <div class="bg-[#76070d] p-4 rounded-lg text-center">
-            <a
-              href="#"
-              class="btn bg-[#ae560e] hover:bg-[#8c5d41] border-none text-white"
-            >
-              Únete a nuestro servidor de Discord
-            </a>
-          </div>
+          <BtnDiscord bgColor="red-600" btnColor="amber-400" btnHoverColor="amber-500" textColor="red-800" />
         </div>
       </div>
 

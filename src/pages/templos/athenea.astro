@@ -2,6 +2,7 @@
 import Footer from "@components/Footer.astro";
 import Navbar from "@components/Navbar.astro";
 import Layout from "@layouts/Layout.astro";
+import BtnDiscord from "@components/BtnDiscord.astro";
 import "@styles/tailwind.css";
 import "@styles/Index.css";
 ---
@@ -113,13 +114,8 @@ import "@styles/Index.css";
                 Sacerdotisas para darte la bienvenida
               </li>
             </ul>
-          </div>
-          
-          <div class="bg-[#0d1b3a] p-4 rounded-lg text-center">
-            <a href="#" class="btn bg-[#3b5998] hover:bg-[#4a69ad] border-none text-white">
-              Únete a nuestro servidor de Discord
-            </a>
-          </div>
+          </div>          
+          <BtnDiscord bgColor="[#0d1b3a]" btnColor="[#3b5998]" btnHoverColor="[#4a69ad]" textColor="white" />
         </div>
       </div>
       

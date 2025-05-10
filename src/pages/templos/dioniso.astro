@@ -2,6 +2,7 @@
 import Footer from "@components/Footer.astro";
 import Navbar from "@components/Navbar.astro";
 import Layout from "@layouts/Layout.astro";
+import BtnDiscord from "@components/BtnDiscord.astro";
 import "@styles/tailwind.css";
 import "@styles/Index.css";
 ---
@@ -9,67 +10,133 @@ import "@styles/Index.css";
 <Layout>
   <Navbar />
   <div class="container mx-auto px-4 py-8">
-    <div class="bg-gradient-to-br from-yellow-200 via-amber-300 to-yellow-400 rounded-lg shadow-lg p-6 border-2 border-blue-800">
-      <h1 class="text-4xl font-extrabold mb-6 text-center text-blue-900">Templo de Dioniso</h1>
+    <div class="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 rounded-lg shadow-lg p-6 border-2 border-amber-500">
+      <h1 class="text-4xl font-extrabold mb-6 text-center text-amber-300">Templo de Dioniso</h1>
 
       <div class="flex flex-col md:flex-row gap-8">
         <div class="md:w-1/2">
           <img
-            src="https://picsum.photos/800/600?random=3"
+            src="/Img/Logo_Dioniso.webp"
             alt="Templo de Dioniso"
-            class="rounded-lg w-full h-[400px] object-cover shadow-md border-4 border-blue-700"
+            class="rounded-lg w-full h-[400px] object-fill shadow-md border-4 border-amber-500"
           />
         </div>
 
         <div class="md:w-1/2 space-y-6">
-          <div class="bg-blue-50 bg-opacity-60 p-6 rounded-lg border border-amber-600">
-            <h2 class="text-2xl font-semibold text-blue-800 mb-3">Bienvenido al Templo de Dioniso</h2>
-            <p class="text-blue-900 leading-relaxed font-sans">
-              Un espacio dedicado a los adultos, donde la libertad de expresión y la pasión por el epic convergen bajo la inspiración de la vid, el vino y la celebración.
+          <div class="bg-purple-950 bg-opacity-80 p-6 rounded-lg border border-amber-400">
+            <h2 class="text-2xl font-semibold text-amber-300 mb-3">Sobre el Templo</h2>
+            <p class="text-amber-100 leading-relaxed font-sans">
+              El Templo de Dioniso es un espacio refinado donde encontrarás compañeros de copas con quienes podrás disfrutar de gustos en común y, no menos importante, de Epic The Musical desde una perspectiva más madura y elevada.
             </p>
           </div>
 
-          <div class="bg-blue-50 bg-opacity-60 p-6 rounded-lg border border-amber-600">
-            <h2 class="text-2xl font-semibold text-blue-800 mb-3">En este templo encontrarás:</h2>
-            <ul class="list-disc list-inside text-blue-900 space-y-2 font-sans">
-              <li>Degustaciones y catas de vinos.</li>
-              <li>Charlas abiertas y debates francos.</li>
-              <li>Música en vivo y karaokes temáticos.</li>
-              <li>Retiros sensoriales y maridajes literarios.</li>
-              <li>Performance poéticas y teatro improvisado.</li>
-              <li>Conexión con la comunidad adulta de Epic.</li>
-              <li>Una atmósfera de camaradería y diversión.</li>
+          <div class="bg-purple-950 bg-opacity-80 p-6 rounded-lg border border-amber-400">
+            <h2 class="text-2xl font-semibold text-amber-300 mb-3">En este templo encontrarás:</h2>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-amber-100">
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-purple-700 rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="#fcd34d" d="M15.5,21.27L14.66,21.18C13.9,21.11 13.25,20.6 13,19.87C12.47,17.91 12.47,15.83 13,13.87C15.32,13.4 17,11.37 17,9C17,7 15.84,5.27 14.11,4.44C14.25,4.24 14.42,4.06 14.61,3.91L15.5,3.2L16.39,3.91C16.76,4.23 17.04,4.66 17.2,5.13C17.36,5.6 17.41,6.1 17.35,6.59C17.29,7.08 17.11,7.55 16.84,7.95C16.57,8.35 16.21,8.68 15.79,8.91C15.42,10.67 16.13,12.51 17.61,13.56C17.87,13.76 18.13,13.93 18.41,14.08C19.13,14.44 19.69,15.03 20.03,15.76C20.37,16.5 20.46,17.32 20.29,18.11C20.11,18.9 19.67,19.61 19.05,20.13C18.43,20.64 17.65,20.93 16.85,20.94L15.5,21.27Z"/>
+                    <path fill="#fcd34d" d="M11,17.5C11,15.29 9.21,13.5 7,13.5V12.5C9.76,12.5 12,14.74 12,17.5H11M7,16.5C6.17,16.5 5.5,17.17 5.5,18C5.5,18.83 6.17,19.5 7,19.5C7.83,19.5 8.5,18.83 8.5,18C8.5,17.17 7.83,16.5 7,16.5Z"/>
+                  </svg>
+                </div>
+                Noches de vino y conversación
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-purple-700 rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="#fcd34d" d="M18,9H16V7H18M18,13H16V11H18M18,17H16V15H18M8,9H6V7H8M8,13H6V11H8M8,17H6V15H8M18,3V5H16V3H8V5H6V3H4V21H6V19H8V21H16V19H18V21H20V3H18Z"/>
+                  </svg>
+                </div>
+                Proyecciones de películas
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-purple-700 rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="#fcd34d" d="M12,3V12L8.5,8.5L6.5,10.5L12,16L17.5,10.5L15.5,8.5L12,12V3M12,21A8,8 0 0,1 4,13H2A10,10 0 0,0 12,23A10,10 0 0,0 22,13H20A8,8 0 0,1 12,21Z"/>
+                  </svg>
+                </div>
+                Musicales en grupo
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-purple-700 rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="#fcd34d" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M7,10L12,15L17,10H7Z"/>
+                  </svg>
+                </div>
+                Debates y charlas sin filtro
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-purple-700 rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="#fcd34d" d="M12,2C6.47,2 2,6.47 2,12C2,17.53 6.47,22 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M13,9.94L14.06,11L15.12,9.94L16.18,11L17.24,9.94L15.12,7.82L13,9.94M8.88,9.94L9.94,11L11,9.94L8.88,7.82L6.76,9.94L7.82,11L8.88,9.94M12,17.5C14.33,17.5 16.31,16.04 17.11,14H6.89C7.69,16.04 9.67,17.5 12,17.5Z"/>
+                  </svg>
+                </div>
+                Ambiente relajado y maduro
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 flex items-center justify-center bg-purple-700 rounded-full p-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                    <path fill="#fcd34d" d="M21,5V7H3V5H21M3,17H12V19H3V17M3,11H21V13H3V11Z"/>
+                  </svg>
+                </div>
+                Espacio exclusivo para adultos
+              </li>
             </ul>
           </div>
+          
+          <BtnDiscord bgColor="slate-800" />
 
-          <div class="bg-blue-50 bg-opacity-60 p-6 rounded-lg border border-amber-600 text-center">
-            <a href="#" class="btn bg-amber-500 hover:bg-amber-600 text-blue-900 font-bold py-2 px-4 rounded font-sans">
-              Únete a nuestra celebración
-            </a>
+        </div>
+      </div>
+      
+      <!-- Sección adicional para el mensaje de bienvenida completo -->
+      <div class="mt-8 bg-purple-950 bg-opacity-80 p-6 rounded-lg border border-amber-400">
+        <h2 class="text-2xl font-semibold text-amber-300 mb-4 text-center">Nuestra Comunidad</h2>
+        <div class="flex flex-col md:flex-row items-center gap-6">
+          <div class="md:w-1/3">
+            <img 
+              src="/Img/Presentacion_Dioniso.webp" 
+              alt="Dioniso te da la bienvenida" 
+              class="rounded-lg w-full object-cover shadow-md border-2 border-amber-500"
+            />
+          </div>
+          <div class="md:w-2/3">
+            <div class="prose prose-amber prose-lg max-w-none">
+              <p class="text-amber-100 mb-4">
+                En este espacio exclusivo para adultos, cultivamos conversaciones elevadas sobre Epic The Musical, analizando sus temas más profundos y sus conexiones con la mitología clásica. Nuestros miembros comparten no solo el amor por esta obra, sino también por el buen gusto en diversas expresiones artísticas.
+              </p>
+              <p class="text-amber-100 mb-4">
+                Aquí encontrarás un ambiente donde el respeto y la camaradería son tan importantes como el disfrute de nuestras pasiones compartidas. Nuestras reuniones virtuales para ver películas y musicales se convierten en experiencias enriquecedoras gracias a las perspectivas únicas de cada miembro.
+              </p>
+              <p class="text-amber-100 font-bold">
+                Te invitamos a formar parte de esta comunidad donde las copas se alzan no solo en celebración, sino también en honor al arte, la cultura y las conexiones genuinas entre personas afines.
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Sección adicional de eventos adultos -->
-      <div class="mt-8 bg-blue-100 p-6 rounded-lg border border-amber-600">
-        <h2 class="text-2xl font-semibold text-blue-800 mb-4 text-center">Próximos Eventos</h2>
+      <!-- Sección de actividades -->
+      <div class="mt-8 bg-purple-950 bg-opacity-80 p-6 rounded-lg border border-amber-400">
+        <h2 class="text-2xl font-semibold text-amber-300 mb-4 text-center">Actividades Destacadas</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-amber-50 p-4 rounded-lg shadow font-sans">
-            <h3 class="text-lg font-semibold text-blue-900 mb-2">Cata Nocturna de Borgoña</h3>
-            <p class="text-blue-800">Únete a expertos sommeliers para descubrir los matices del vino tinto.</p>
+          <div class="bg-purple-800 p-4 rounded-lg shadow font-sans">
+            <h3 class="text-lg font-semibold text-amber-300 mb-2">Noche de Terror</h3>
+            <p class="text-amber-100">Proyecciones de películas de terror para disfrutar en comunidad a través de Discord.</p>
           </div>
-          <div class="bg-amber-50 p-4 rounded-lg shadow font-sans">
-            <h3 class="text-lg font-semibold text-blue-900 mb-2">Noche de Teatro y Vino</h3>
-            <p class="text-blue-800">Performance y maridaje de textos épicos con varietales selectos.</p>
+          <div class="bg-purple-800 p-4 rounded-lg shadow font-sans">
+            <h3 class="text-lg font-semibold text-amber-300 mb-2">Musicales en Grupo</h3>
+            <p class="text-amber-100">Disfruta de los mejores musicales en compañía de otros entusiastas.</p>
           </div>
-          <div class="bg-amber-50 p-4 rounded-lg shadow font-sans">
-            <h3 class="text-lg font-semibold text-blue-900 mb-2">Brindis y Poesía</h3>
-            <p class="text-blue-800">Lectura abierta de poemas con copa en mano.</p>
+          <div class="bg-purple-800 p-4 rounded-lg shadow font-sans">
+            <h3 class="text-lg font-semibold text-amber-300 mb-2">Debates Épicos</h3>
+            <p class="text-amber-100">Conversaciones maduras sobre temas diversos en un ambiente de respeto.</p>
           </div>
         </div>
       </div>
 
-      <div class="mt-6 text-center text-blue-800 font-semibold">
+      <div class="mt-6 text-center text-amber-300 font-semibold">
         <p>¡Salud y Bienvenid@s!</p>
       </div>
     </div>

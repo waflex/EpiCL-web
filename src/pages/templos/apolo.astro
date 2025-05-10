@@ -2,41 +2,238 @@
 import Footer from "@components/Footer.astro";
 import Navbar from "@components/Navbar.astro";
 import Layout from "@layouts/Layout.astro";
+import BtnDiscord from "@components/BtnDiscord.astro";
 import "@styles/tailwind.css";
 import "@styles/Index.css";
 ---
 <Layout>
   <Navbar />
   <div class="container mx-auto px-4 py-8">
-    <div class="bg-white rounded-lg shadow-lg p-6">
-      <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Templo de Apolo</h1>
+    <div class="bg-gradient-to-br from-amber-50 to-white rounded-lg shadow-lg p-6 border-2 border-amber-300">
+      <h1 class="text-3xl font-bold text-amber-700 mb-6 text-center">Templo de Apolo</h1>
       
       <div class="flex flex-col md:flex-row gap-8">
         <div class="md:w-1/2">
           <img
-            src="https://picsum.photos/800/600"
+            src="/Img/Logo_Apolo.webp"
             alt="Templo de Apolo"
-            class="rounded-lg w-full h-[400px] object-cover shadow-md"
+            class="rounded-lg w-full h-[400px] object-fill shadow-md border-2 border-amber-400"
+            onerror="this.src='https://picsum.photos/800/600'; this.onerror=null;"
           />
         </div>
         
         <div class="md:w-1/2 space-y-6">
-          <div class="bg-gray-50 p-6 rounded-lg">
-            <h2 class="text-xl font-semibold text-gray-800 mb-3">Sobre el Templo</h2>
-            <p class="text-gray-700">
-              [Aquí va la descripción del templo y su significado en Epic: The Musical]
+          <div class="bg-amber-100 p-6 rounded-lg border border-amber-300">
+            <h2 class="text-xl font-semibold text-amber-800 mb-3">Que la música le de vida</h2>
+            <p class="text-amber-900 leading-relaxed">
+              Bienvenidos al templo de Apolo, donde todas las personas con afinidad con la música y las artes escénicas pueden convivir. Un espacio dedicado a la expresión artística a través del sonido, la voz y la interpretación.
             </p>
           </div>
           
-          <div class="bg-gray-50 p-6 rounded-lg">
-            <h2 class="text-xl font-semibold text-gray-800 mb-3">Características</h2>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
-              <li>Característica 1</li>
-              <li>Característica 2</li>
-              <li>Característica 3</li>
+          <div class="bg-amber-100 p-6 rounded-lg border border-amber-300">
+            <h2 class="text-xl font-semibold text-amber-800 mb-3">¿Qué hay en el templo?</h2>
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <div class="w-8 h-8 flex-shrink-0 mt-1 bg-amber-600 rounded-full flex items-center justify-center text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
+                    <path fill="currentColor" d="M12,3V12.26C11.5,12.09 11,12 10.5,12C8.56,12 7,13.56 7,15.5C7,17.44 8.56,19 10.5,19C12.44,19 14,17.44 14,15.5V6H18V3H12Z" />
+                  </svg>
+                </div>
+                <span class="text-amber-900">Convocatorias a proyectos musicales</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-8 h-8 flex-shrink-0 mt-1 bg-amber-600 rounded-full flex items-center justify-center text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
+                    <path fill="currentColor" d="M19.45,13.29L17.5,15.24L15.55,13.29L14.14,14.7L16.09,16.65L14.14,18.6L15.55,20L17.5,18.05L19.45,20L20.86,18.6L18.91,16.65L20.86,14.7L19.45,13.29M13,19.96V22H4C2.9,22 2,21.1 2,20V6C2,4.89 2.9,4 4,4H5V2H7V4H17V2H19V4H20C21.1,4 22,4.9 22,6V13.03C21.5,12.23 20.8,11.54 20,11V8H4V20H13.03C13.03,20 13,19.97 13,19.96Z" />
+                  </svg>
+                </div>
+                <span class="text-amber-900">Compartimos nuestros gustos y habilidades musicales</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-8 h-8 flex-shrink-0 mt-1 bg-amber-600 rounded-full flex items-center justify-center text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
+                    <path fill="currentColor" d="M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z" />
+                  </svg>
+                </div>
+                <span class="text-amber-900">La oportunidad de compartir y aprender</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="w-8 h-8 flex-shrink-0 mt-1 bg-amber-600 rounded-full flex items-center justify-center text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
+                    <path fill="currentColor" d="M21,3V15.5A3.5,3.5 0 0,1 17.5,19A3.5,3.5 0 0,1 14,15.5A3.5,3.5 0 0,1 17.5,12C18.04,12 18.55,12.12 19,12.34V6.47L9,8.6V17.5A3.5,3.5 0 0,1 5.5,21A3.5,3.5 0 0,1 2,17.5A3.5,3.5 0 0,1 5.5,14C6.04,14 6.55,14.12 7,14.34V6L21,3Z" />
+                  </svg>
+                </div>
+                <span class="text-amber-900">Covers y proyectos de otros fans de Epic</span>
+              </li>
             </ul>
           </div>
+          <BtnDiscord bgColor="amber-500" btnColor="white" btnHoverColor="amber-50" textColor="amber-800" />
         </div>
+      </div>
+      
+      <!-- Sección de Proyectos Musicales -->
+      <div class="mt-8 bg-amber-100 p-6 rounded-lg border border-amber-300">
+        <h2 class="text-2xl font-semibold text-amber-800 mb-4 text-center">Proyectos Musicales Destacados</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-white rounded-lg overflow-hidden border border-amber-200">
+            <img 
+              src="/Img/Apolo_Music1.webp" 
+              alt="Proyecto musical" 
+              class="w-full h-48 object-cover"
+              onerror="this.src='https://picsum.photos/400/300?random=1'; this.onerror=null;"
+            />
+            <div class="p-3">
+              <h3 class="text-amber-700 font-semibold">Covers Vocales</h3>
+              <p class="text-amber-900 text-sm">Interpretaciones de las canciones de Epic: The Musical</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg overflow-hidden border border-amber-200">
+            <img 
+              src="/Img/Apolo_Music2.webp" 
+              alt="Proyecto musical" 
+              class="w-full h-48 object-cover"
+              onerror="this.src='https://picsum.photos/400/300?random=2'; this.onerror=null;"
+            />
+            <div class="p-3">
+              <h3 class="text-amber-700 font-semibold">Traducciones</h3>
+              <p class="text-amber-900 text-sm">Adaptaciones de las letras a diferentes idiomas</p>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg overflow-hidden border border-amber-200">
+            <img 
+              src="/Img/Apolo_Music3.webp" 
+              alt="Proyecto musical" 
+              class="w-full h-48 object-cover"
+              onerror="this.src='https://picsum.photos/400/300?random=3'; this.onerror=null;"
+            />
+            <div class="p-3">
+              <h3 class="text-amber-700 font-semibold">Instrumentales</h3>
+              <p class="text-amber-900 text-sm">Versiones instrumentales y arreglos musicales</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Sección de Instrumentos y Habilidades -->
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-amber-100 p-6 rounded-lg border border-amber-300">
+          <h2 class="text-xl font-semibold text-amber-800 mb-3">Instrumentos Musicales</h2>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="flex items-center gap-2 bg-white p-3 rounded-lg border border-amber-200">
+              <div class="w-10 h-10 flex-shrink-0 bg-amber-500 rounded-full flex items-center justify-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                  <path fill="currentColor" d="M19,3V21H15V3H19M14,3V21H10V3H14M9,3V21H5V3H9Z" />
+                </svg>
+              </div>
+              <span class="text-amber-900">Piano</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white p-3 rounded-lg border border-amber-200">
+              <div class="w-10 h-10 flex-shrink-0 bg-amber-500 rounded-full flex items-center justify-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                  <path fill="currentColor" d="M19.59,3H22V5H20.41L16.17,9.24C15.8,8.68 15.32,8.23 14.77,7.94L19.59,3M12,8A4,4 0 0,1 16,12C16,13.82 14.77,15.42 13,15.87V16A5,5 0 0,1 8,21A5,5 0 0,1 3,16A5,5 0 0,1 8,11H8.13C8.58,9.24 10.17,8 12,8M12,10.5A1.5,1.5 0 0,0 10.5,12A1.5,1.5 0 0,0 12,13.5A1.5,1.5 0 0,0 13.5,12A1.5,1.5 0 0,0 12,10.5M6.94,14.24L3.71,17.47L2.29,16.06L5.53,12.82L6.94,14.24Z" />
+                </svg>
+              </div>
+              <span class="text-amber-900">Guitarra</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white p-3 rounded-lg border border-amber-200">
+              <div class="w-10 h-10 flex-shrink-0 bg-amber-500 rounded-full flex items-center justify-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                  <path fill="currentColor" d="M12,3C7.58,3 4,4.79 4,7V17C4,19.21 7.59,21 12,21C16.41,21 20,19.21 20,17V7C20,4.79 16.42,3 12,3M18,17C18,17.5 15.87,19 12,19C8.13,19 6,17.5 6,17V14.77C7.61,15.55 9.72,16 12,16C14.28,16 16.39,15.55 18,14.77V17M18,12.45C16.7,13.4 14.42,14 12,14C9.58,14 7.3,13.4 6,12.45V9.64C7.47,10.47 9.61,11 12,11C14.39,11 16.53,10.47 18,9.64V12.45M12,9C8.13,9 6,7.5 6,7C6,6.5 8.13,5 12,5C15.87,5 18,6.5 18,7C18,7.5 15.87,9 12,9Z" />
+                </svg>
+              </div>
+              <span class="text-amber-900">Batería</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white p-3 rounded-lg border border-amber-200">
+              <div class="w-10 h-10 flex-shrink-0 bg-amber-500 rounded-full flex items-center justify-center text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+                  <path fill="currentColor" d="M21,3V15.5A3.5,3.5 0 0,1 17.5,19A3.5,3.5 0 0,1 14,15.5A3.5,3.5 0 0,1 17.5,12C18.04,12 18.55,12.12 19,12.34V6.47L9,8.6V17.5A3.5,3.5 0 0,1 5.5,21A3.5,3.5 0 0,1 2,17.5A3.5,3.5 0 0,1 5.5,14C6.04,14 6.55,14.12 7,14.34V6L21,3Z" />
+                </svg>
+              </div>
+              <span class="text-amber-900">Voz</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-amber-100 p-6 rounded-lg border border-amber-300">
+          <h2 class="text-xl font-semibold text-amber-800 mb-3">Próximos Eventos</h2>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 bg-white p-3 rounded-lg border border-amber-200">
+              <div class="w-10 h-10 flex-shrink-0 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold">
+                <span>01</span>
+              </div>
+              <div>
+                <h3 class="text-amber-700 font-semibold">Jam Session Virtual</h3>
+                <p class="text-amber-900 text-sm">Sesión de improvisación musical en línea</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3 bg-white p-3 rounded-lg border border-amber-200">
+              <div class="w-10 h-10 flex-shrink-0 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold">
+                <span>02</span>
+              </div>
+              <div>
+                <h3 class="text-amber-700 font-semibold">Taller de Composición</h3>
+                <p class="text-amber-900 text-sm">Aprende a crear tus propias canciones</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3 bg-white p-3 rounded-lg border border-amber-200">
+              <div class="w-10 h-10 flex-shrink-0 bg-amber-500 rounded-full flex items-center justify-center text-white font-bold">
+                <span>03</span>
+              </div>
+              <div>
+                <h3 class="text-amber-700 font-semibold">Concurso de Covers</h3>
+                <p class="text-amber-900 text-sm">Muestra tu talento interpretando canciones de Epic</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Sección de Testimonios -->
+      <div class="mt-8 bg-amber-100 p-6 rounded-lg border border-amber-300">
+        <h2 class="text-2xl font-semibold text-amber-800 mb-4 text-center">Voces del Templo</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-white p-4 rounded-lg border border-amber-200">
+            <div class="flex items-start gap-3">
+              <div class="w-12 h-12 rounded-full bg-amber-300 flex items-center justify-center">
+                <span class="text-amber-800 font-bold text-xl">M</span>
+              </div>
+              <div>
+                <h3 class="text-amber-700 font-semibold">Miembro del Templo</h3>
+                <p class="text-amber-900 text-sm italic">
+                  "El Templo de Apolo me ha permitido conectar con otros músicos que comparten mi pasión por Epic. Juntos hemos creado covers increíbles."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-4 rounded-lg border border-amber-200">
+            <div class="flex items-start gap-3">
+              <div class="w-12 h-12 rounded-full bg-amber-300 flex items-center justify-center">
+                <span class="text-amber-800 font-bold text-xl">C</span>
+              </div>
+              <div>
+                <h3 class="text-amber-700 font-semibold">Compositor</h3>
+                <p class="text-amber-900 text-sm italic">
+                  "Gracias a los talleres del templo, he mejorado mis habilidades de composición y ahora puedo crear mis propias canciones inspiradas en Epic."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Sección de Llamado a la Acción -->
+      <div class="mt-8 bg-gradient-to-r from-amber-500 to-amber-400 p-6 rounded-lg text-center">
+        <h2 class="text-2xl font-bold text-white mb-3">¿Listo para unirte a la sinfonía?</h2>
+        <p class="text-white mb-4 max-w-2xl mx-auto">
+          Comparte tu talento musical con otros fans de Epic: The Musical. Todos los niveles son bienvenidos, desde principiantes hasta músicos experimentados.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#" class="btn bg-amber-800 hover:bg-amber-900 text-white border-none">Ver proyectos actuales</a>
+        </div>
+      </div>
+      
+      <div class="mt-6 text-center text-amber-700 font-semibold">
+        <p>Templo de Apolo: Donde la música cobra vida</p>
       </div>
     </div>
   </div>

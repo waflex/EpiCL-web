@@ -4,12 +4,13 @@ import Navbar from "@components/Navbar.astro";
 import Layout from "@layouts/Layout.astro";
 import "@styles/tailwind.css";
 import "@styles/Index.css";
+
 // Usa import.meta.glob para buscar archivos en la carpeta "templos"
 const templos = import.meta.glob('../pages/templos/*.astro');
 
 // Extrae los nombres de los templos a partir de las rutas
 const templosLinks = Object.keys(templos).map((path) => {
-  const name = path.split('/').pop().replace('.astro', '');
+  const name = path.split('/').pop()?.replace('.astro', '') || '';
   return { name, path: `/templos/${name}` };
 });
 ---

@@ -1,0 +1,15 @@
+---
+// Define props with default values
+const { 
+  bgColor = "purple-700", 
+  btnColor = "amber-400", 
+  btnHoverColor = "amber-500", 
+  textColor = "purple-900" 
+} = Astro.props;
+---
+
+<div class={`bg-${bgColor} p-4 rounded-lg text-center`}>
+  <a href="https://discord.gg/nq7YKdSDv3" target="_blank" class={`btn bg-${btnColor} hover:bg-${btnHoverColor} text-${textColor} font-bold py-2 px-4 rounded font-sans`}>
+    Únete a nuestro servidor de Discord
+  </a>
+</div>

@@ -4,27 +4,39 @@ import Navbar from "@components/Navbar.astro";
 import Layout from "@layouts/Layout.astro";
 import "@styles/tailwind.css";
 import "@styles/Index.css";
-
 ---
 
 <Layout>
   <Navbar />
+  
+  <!-- Hero Section -->
+  <div class="bg-base-100 py-12">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h1 class="text-5xl font-bold text-base-content mb-4">
+          Sobre Nosotros <span class="text-primary">🎭</span>
+        </h1>
+        <p class="text-xl text-base-content/80 max-w-3xl mx-auto font-sans">
+          Conoce al equipo detrás del Fan Club Oficial de Epic: The Musical en Chile
+          y nuestra pasión por compartir esta increíble historia.
+        </p>
+      </div>
+    </div>
+  </div>  
   <div class="container mx-auto px-4 py-8">
-    <h1 class="text-4xl font-bold text-base-content mb-8 text-center">
-      Sobre Nosotros 🎭
-    </h1>
-    <div class="grid gap-8">
+    <div class="grid gap-12">
       <!-- Misión -->
-      <section class="mission bg-base-200 rounded-lg shadow-lg p-6">
-        <div class="flex flex-col md:flex-row items-center gap-6">
+      <section class="mission bg-base-200 rounded-lg shadow-xl p-8 transform transition-all duration-300 hover:shadow-2xl">
+        <div class="flex flex-col md:flex-row items-center gap-8">
           <img
-            src="https://picsum.photos/400/300"
-            alt="Mission illustration"
-            class="rounded-lg w-full md:w-1/3 object-cover"
+            src="/Img/mission_epic.jpg" 
+            alt="Nuestra Misión"
+            class="rounded-lg w-full md:w-1/3 object-cover h-64 shadow-md"
+            onerror="this.src='https://picsum.photos/400/300'; this.onerror=null;"
           />
           <div>
-            <h2 class="text-2xl font-bold text-base-content mb-4">Nuestra Misión</h2>
-            <p class="text-base-content/80 font-sans">
+            <h2 class="text-3xl font-bold text-base-content mb-4">Nuestra Misión</h2>
+            <p class="text-base-content/80 font-sans leading-relaxed">
               Nuestra misión es construir y fortalecer la comunidad de fans de
               Epic: The Musical en Chile, creando un espacio donde los
               seguidores puedan compartir su pasión, teorías, fanarts y
@@ -36,18 +48,18 @@ import "@styles/Index.css";
           </div>
         </div>
       </section>
-
       <!-- Visión -->
-      <section class="vision bg-base-200 rounded-lg shadow-lg p-6">
-        <div class="flex flex-col md:flex-row-reverse items-center gap-6">
+      <section class="vision bg-base-200 rounded-lg shadow-xl p-8 transform transition-all duration-300 hover:shadow-2xl">
+        <div class="flex flex-col md:flex-row-reverse items-center gap-8">
           <img
-            src="https://picsum.photos/401/300"
-            alt="Vision illustration"
-            class="rounded-lg w-full md:w-1/3 object-cover"
+            src="/Img/vision_epic.jpg"
+            alt="Nuestra Visión"
+            class="rounded-lg w-full md:w-1/3 object-cover h-64 shadow-md"
+            onerror="this.src='https://picsum.photos/401/300'; this.onerror=null;"
           />
           <div>
-            <h2 class="text-2xl font-bold text-base-content mb-4">Nuestra Visión</h2>
-            <p class="text-base-content/80 font-sans">
+            <h2 class="text-3xl font-bold text-base-content mb-4">Nuestra Visión</h2>
+            <p class="text-base-content/80 font-sans leading-relaxed">
               Ser el fan club de referencia en Chile para Epic: The Musical,
               reconocido por su creatividad, compromiso y conexión con la
               comunidad global del musical. Aspiramos a expandir el amor por
@@ -58,27 +70,182 @@ import "@styles/Index.css";
           </div>
         </div>
       </section>
-
       <!-- Valores -->
-      <section class="values bg-base-200 rounded-lg shadow-lg p-6">
-        <div class="flex flex-col md:flex-row items-center gap-6">
+      <section class="values bg-base-200 rounded-lg shadow-xl p-8 transform transition-all duration-300 hover:shadow-2xl">
+        <div class="flex flex-col md:flex-row items-center gap-8">
           <img
-            src="https://picsum.photos/402/300"
-            alt="Values illustration"
-            class="rounded-lg w-full md:w-1/3 object-cover"
+            src="/Img/values_epic.jpg"
+            alt="Nuestros Valores"
+            class="rounded-lg w-full md:w-1/3 object-cover h-64 shadow-md"
+            onerror="this.src='https://picsum.photos/402/300'; this.onerror=null;"
           />
           <div>
-            <h2 class="text-2xl font-bold text-base-content mb-4">Nuestros Valores</h2>
-            <ul class="list-disc pl-6 text-base-content/80 font-sans space-y-2">
-              <li>🎵 Pasión por la música y el arte.</li>
-              <li>🤝 Inclusión y respeto por todos los fans.</li>
-              <li>🎨 Fomento de la creatividad y el talento.</li>
-              <li>🌟 Compromiso con la comunidad.</li>
+            <h2 class="text-3xl font-bold text-base-content mb-4">Nuestros Valores</h2>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-base-content/80 font-sans">
+              <li class="flex items-center gap-3 bg-base-100 p-4 rounded-lg shadow">
+                <span class="text-2xl text-primary">🎵</span>
+                <span>Pasión por la música y el arte</span>
+              </li>
+              <li class="flex items-center gap-3 bg-base-100 p-4 rounded-lg shadow">
+                <span class="text-2xl text-primary">🤝</span>
+                <span>Inclusión y respeto por todos los fans</span>
+              </li>
+              <li class="flex items-center gap-3 bg-base-100 p-4 rounded-lg shadow">
+                <span class="text-2xl text-primary">🎨</span>
+                <span>Fomento de la creatividad y el talento</span>
+              </li>
+              <li class="flex items-center gap-3 bg-base-100 p-4 rounded-lg shadow">
+                <span class="text-2xl text-primary">🌟</span>
+                <span>Compromiso con la comunidad</span>
+              </li>
+              <li class="flex items-center gap-3 bg-base-100 p-4 rounded-lg shadow">
+                <span class="text-2xl text-primary">🌍</span>
+                <span>Conexión con la comunidad global</span>
+              </li>
+              <li class="flex items-center gap-3 bg-base-100 p-4 rounded-lg shadow">
+                <span class="text-2xl text-primary">💫</span>
+                <span>Autenticidad y pasión</span>
+              </li>
             </ul>
           </div>
+        </div>
+      </section>      
+      <!-- Historia -->
+      <section class="history bg-base-200 rounded-lg shadow-xl p-8 transform transition-all duration-300 hover:shadow-2xl">
+        <h2 class="text-3xl font-bold text-base-content mb-6 text-center">Nuestra Historia</h2>
+        <div class="relative">
+          <!-- Timeline -->
+          <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary"></div>
+          
+          <!-- Timeline items -->
+          <div class="grid grid-cols-1 gap-12 relative z-10">
+            <!-- Item 1 -->
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 md:text-right">
+                <div class="bg-base-100 p-6 rounded-lg shadow-md">
+                  <h3 class="text-xl font-bold text-primary mb-2">2023</h3>
+                  <p class="text-base-content/80 font-sans">Fundación del Fan Club Epic: The Musical Chile</p>
+                </div>
+              </div>
+              <div class="rounded-full bg-primary w-8 h-8 flex items-center justify-center z-10 my-4 md:my-0">
+                <span class="text-white font-bold">1</span>
+              </div>
+              <div class="md:w-1/2 md:pl-12"></div>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12"></div>
+              <div class="rounded-full bg-primary w-8 h-8 flex items-center justify-center z-10 my-4 md:my-0">
+                <span class="text-white font-bold">2</span>
+              </div>
+              <div class="md:w-1/2 md:pl-12">
+                <div class="bg-base-100 p-6 rounded-lg shadow-md">
+                  <h3 class="text-xl font-bold text-primary mb-2">2024</h3>
+                  <p class="text-base-content/80 font-sans">Creación de los Templos temáticos y expansión de la comunidad</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Item 3 -->
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-1/2 md:pr-12 md:text-right">
+                <div class="bg-base-100 p-6 rounded-lg shadow-md">
+                  <h3 class="text-xl font-bold text-primary mb-2">Futuro</h3>
+                  <p class="text-base-content/80 font-sans">Organización de eventos presenciales y colaboraciones con la producción de Epic</p>
+                </div>
+              </div>
+              <div class="rounded-full bg-primary w-8 h-8 flex items-center justify-center z-10 my-4 md:my-0">
+                <span class="text-white font-bold">3</span>
+              </div>
+              <div class="md:w-1/2 md:pl-12"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Equipo -->
+      <section class="team bg-base-200 rounded-lg shadow-xl p-8 transform transition-all duration-300 hover:shadow-2xl">
+        <h2 class="text-3xl font-bold text-base-content mb-8 text-center">Nuestro Equipo</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Miembro 1 -->
+          <div class="bg-base-100 rounded-lg shadow-md overflow-hidden">
+            <div class="h-64 bg-gray-300 relative">
+              <img 
+                src="/Img/team_member1.jpg" 
+                alt="Miembro del equipo" 
+                class="w-full h-full object-cover"
+                onerror="this.src='https://picsum.photos/300/400'; this.onerror=null;"
+              />
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                <h3 class="text-xl font-bold text-white">Nombre</h3>
+                <p class="text-white/80">Fundador/a</p>
+              </div>
+            </div>
+            <div class="p-4">
+              <p class="text-base-content/80 font-sans">
+                Apasionado/a por Epic desde el primer día. Lidera el fan club con entusiasmo y creatividad.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Miembro 2 -->
+          <div class="bg-base-100 rounded-lg shadow-md overflow-hidden">
+            <div class="h-64 bg-gray-300 relative">
+              <img 
+                src="/Img/team_member2.jpg" 
+                alt="Miembro del equipo" 
+                class="w-full h-full object-cover"
+                onerror="this.src='https://picsum.photos/301/400'; this.onerror=null;"
+              />
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                <h3 class="text-xl font-bold text-white">Nombre</h3>
+                <p class="text-white/80">Coordinador/a de Eventos</p>
+              </div>
+            </div>
+            <div class="p-4">
+              <p class="text-base-content/80 font-sans">
+                Organiza todas nuestras actividades y asegura que cada evento sea una experiencia inolvidable.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Miembro 3 -->
+          <div class="bg-base-100 rounded-lg shadow-md overflow-hidden">
+            <div class="h-64 bg-gray-300 relative">
+              <img 
+                src="/Img/team_member3.jpg" 
+                alt="Miembro del equipo" 
+                class="w-full h-full object-cover"
+                onerror="this.src='https://picsum.photos/302/400'; this.onerror=null;"
+              />
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                <h3 class="text-xl font-bold text-white">Nombre</h3>
+                <p class="text-white/80">Gestor/a de Comunidad</p>
+              </div>
+            </div>
+            <div class="p-4">
+              <p class="text-base-content/80 font-sans">
+                Mantiene activas nuestras redes sociales y fomenta la participación de todos los miembros.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- CTA -->
+      <section class="cta bg-primary text-primary-content rounded-lg shadow-xl p-8 text-center">
+        <h2 class="text-3xl font-bold mb-4">¿Quieres ser parte de nuestra historia?</h2>
+        <p class="text-xl mb-6 max-w-2xl mx-auto">
+          Únete a nuestra comunidad y comparte tu pasión por Epic: The Musical con otros fans en Chile.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#" class="btn btn-secondary">Únete al Discord</a>
+          <a href="#" class="btn bg-white text-primary hover:bg-gray-100">Síguenos en Redes</a>
         </div>
       </section>
     </div>
   </div>
+  
   <Footer />
 </Layout>

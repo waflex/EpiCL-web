@@ -1,0 +1,448 @@
+---
+import Footer from "@components/Footer.astro";
+import Navbar from "@components/Navbar.astro";
+import Layout from "@layouts/Layout.astro";
+import BtnDiscord from "@components/BtnDiscord.astro";
+import "@styles/tailwind.css";
+import "@styles/Index.css";
+---
+
+<Layout>
+  <Navbar />
+  <div class="container mx-auto px-4 py-8">
+    <div
+      class="bg-gradient-to-br from-[#2F383A] via-[#7E9C92] to-[#2F383A] rounded-lg shadow-lg p-6 border-2 border-[#B8C394]"
+    >
+      <h1 class="text-3xl font-bold text-[#B8C394] mb-6 text-center">
+        Templo de Proteo
+      </h1>
+
+      <div class="flex flex-col md:flex-row gap-8">
+        <div class="md:w-1/2">
+          <img
+            src="/Img/Logo_Proteo.webp"
+            alt="Templo de Proteo"
+            class="rounded-lg w-full h-[400px] object-fill shadow-md border-2 border-[#B8C394]"
+          />
+        </div>
+
+        <div class="md:w-1/2 space-y-6">
+          <div
+            class="bg-[#2F383A] bg-opacity-90 p-6 rounded-lg border border-[#95A677]"
+          >
+            <h2 class="text-xl font-semibold text-[#B8C394] mb-3">
+              ¡Bienvenidos al Templo de Proteo!
+            </h2>
+            <p class="text-gray-200 leading-relaxed">
+              Somos el templo de Proteo, un rincón en la comunidad de Epic Chile
+              para amantes del cosplay. Aquí celebramos el arte de la
+              transformación y la creatividad, inspirados por el dios griego que
+              podía cambiar de forma a voluntad.
+            </p>
+          </div>
+
+          <div
+            class="bg-[#2F383A] bg-opacity-90 p-6 rounded-lg border border-[#95A677]"
+          >
+            <h2 class="text-xl font-semibold text-[#B8C394] mb-3">
+              En este templo podrás:
+            </h2>
+            <ul class="space-y-3 text-gray-200">
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-8 h-8 flex-shrink-0 mt-1 bg-[#798665] rounded-full flex items-center justify-center text-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M4,4H7L9,2H15L17,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9Z"
+                    ></path>
+                  </svg>
+                </div>
+                <span
+                  >Compartir tus proyectos de cosplay en proceso, o terminados.</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-8 h-8 flex-shrink-0 mt-1 bg-[#798665] rounded-full flex items-center justify-center text-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M9,5V9H21V5M9,19H21V15H9M9,14H21V10H9M4,9H8V5H4M4,19H8V15H4M4,14H8V10H4V14Z"
+                    ></path>
+                  </svg>
+                </div>
+                <span
+                  >Obtener consejos de costura, prop-making, peluquería, entre
+                  otros.</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-8 h-8 flex-shrink-0 mt-1 bg-[#798665] rounded-full flex items-center justify-center text-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M12,3L1,9L12,15L21,10.09V17H23V9M5,13.18V17.18L12,21L19,17.18V13.18L12,17L5,13.18Z"
+                    ></path>
+                  </svg>
+                </div>
+                <span
+                  >Aprender de otros miembros y mejorar tus habilidades.</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-8 h-8 flex-shrink-0 mt-1 bg-[#798665] rounded-full flex items-center justify-center text-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M7,7V9H9V7H7M11,7V9H13V7H11M15,7V9H17V7H15M7,11V13H9V11H7M11,11V13H13V11H11M15,11V13H17V11H15M7,15V17H9V15H7M11,15V17H13V15H11M15,15V17H17V15H15Z"
+                    ></path>
+                  </svg>
+                </div>
+                <span
+                  >Presumir tus creaciones y recibir retroalimentación
+                  constructiva.</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="w-8 h-8 flex-shrink-0 mt-1 bg-[#798665] rounded-full flex items-center justify-center text-white"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z"
+                    ></path>
+                  </svg>
+                </div>
+                <span
+                  >Conectar con otros fanáticos del cosplay, y obviamente,
+                  ¡hacer amigos!</span
+                >
+              </li>
+            </ul>
+          </div>
+          <BtnDiscord
+            bgColor="[#798665]"
+            btnColor="[#2F383A]"
+            btnHoverColor="[#2F383A]/80"
+            textColor="[#B8C394]"
+          />
+        </div>
+      </div>
+
+      <!-- Sección de Proyectos Destacados -->
+      <div
+        class="mt-8 bg-[#2F383A] bg-opacity-90 p-6 rounded-lg border border-[#95A677]"
+      >
+        <h2 class="text-2xl font-semibold text-[#B8C394] mb-4 text-center">
+          Proyectos Destacados
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div
+            class="bg-[#2F383A]/70 rounded-lg overflow-hidden border border-[#7E9C92]"
+          >
+            <img
+              src="/Img/Proteo_Cosplay1.webp"
+              alt="Cosplay destacado"
+              class="w-full h-64 object-cover"
+              onerror="this.src='https://picsum.photos/400/300?random=1'; this.onerror=null;"
+            />
+            <div class="p-3">
+              <h3 class="text-[#B8C394] font-semibold">Cosplay de Personaje</h3>
+              <p class="text-gray-300 text-sm">Por: Miembro de la comunidad</p>
+            </div>
+          </div>
+          <div
+            class="bg-[#2F383A]/70 rounded-lg overflow-hidden border border-[#7E9C92]"
+          >
+            <img
+              src="/Img/Proteo_Cosplay2.webp"
+              alt="Cosplay destacado"
+              class="w-full h-64 object-cover"
+              onerror="this.src='https://picsum.photos/400/300?random=2'; this.onerror=null;"
+            />
+            <div class="p-3">
+              <h3 class="text-[#B8C394] font-semibold">Props y Accesorios</h3>
+              <p class="text-gray-300 text-sm">Por: Miembro de la comunidad</p>
+            </div>
+          </div>
+          <div
+            class="bg-[#2F383A]/70 rounded-lg overflow-hidden border border-[#7E9C92]"
+          >
+            <img
+              src="/Img/Proteo_Cosplay3.webp"
+              alt="Cosplay destacado"
+              class="w-full h-64 object-cover"
+              onerror="this.src='https://picsum.photos/400/300?random=3'; this.onerror=null;"
+            />
+            <div class="p-3">
+              <h3 class="text-[#B8C394] font-semibold">
+                Maquillaje y Caracterización
+              </h3>
+              <p class="text-gray-300 text-sm">Por: Miembro de la comunidad</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección de Talleres y Recursos -->
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div
+          class="bg-[#2F383A] bg-opacity-90 p-6 rounded-lg border border-[#95A677]"
+        >
+          <h2 class="text-xl font-semibold text-[#B8C394] mb-3">
+            Talleres y Eventos
+          </h2>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <div
+                class="w-6 h-6 flex-shrink-0 mt-1 bg-[#798665] rounded-full flex items-center justify-center text-white font-bold"
+              >
+                1
+              </div>
+              <div>
+                <h3 class="text-gray-200 font-semibold">Sesiones de Costura</h3>
+                <p class="text-gray-300 text-sm">
+                  Aprende técnicas básicas y avanzadas para tus trajes.
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div
+                class="w-6 h-6 flex-shrink-0 mt-1 bg-[#798665] rounded-full flex items-center justify-center text-white font-bold"
+              >
+                2
+              </div>
+              <div>
+                <h3 class="text-gray-200 font-semibold">
+                  Talleres de Prop-Making
+                </h3>
+                <p class="text-gray-300 text-sm">
+                  Crea accesorios y props con diferentes materiales.
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div
+                class="w-6 h-6 flex-shrink-0 mt-1 bg-[#798665] rounded-full flex items-center justify-center text-white font-bold"
+              >
+                3
+              </div>
+              <div>
+                <h3 class="text-gray-200 font-semibold">
+                  Tutoriales de Maquillaje
+                </h3>
+                <p class="text-gray-300 text-sm">
+                  Técnicas de caracterización para tus personajes favoritos.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          class="bg-[#2F383A] bg-opacity-90 p-6 rounded-lg border border-[#95A677]"
+        >
+          <h2 class="text-xl font-semibold text-[#B8C394] mb-3">
+            Recursos para Cosplayers
+          </h2>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <div
+                class="w-6 h-6 flex-shrink-0 mt-1 bg-[#798665] rounded-full flex items-center justify-center text-white font-bold"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="w-4 h-4"
+                >
+                  <path
+                    fill="#ffffff"
+                    d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M17.13,17C15.92,18.85 14.11,20.24 12,20.92C9.89,20.24 8.08,18.85 6.87,17C6.53,16.5 6.24,16 6,15.47C6,13.82 8.71,12.47 12,12.47C15.29,12.47 18,13.79 18,15.47C17.76,16 17.47,16.5 17.13,17Z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-gray-200 font-semibold">Guía de Personajes</h3>
+                <p class="text-gray-300 text-sm">
+                  Referencias detalladas de los personajes de Epic: The Musical.
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div
+                class="w-6 h-6 flex-shrink-0 mt-1 bg-[#798665] rounded-full flex items-center justify-center text-white font-bold"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="w-4 h-4"
+                >
+                  <path
+                    fill="#ffffff"
+                    d="M19,18H5V6H19M21,4H3C1.89,4 1,4.89 1,6V18A2,2 0 0,0 3,20H21A2,2 0 0,0 23,18V6C23,4.89 22.1,4 21,4M7,8H13V13H7V8M14,8H17V10H14V8M17,11V16H14V11H17M7,14H13V16H7V14Z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-gray-200 font-semibold">Tutoriales en Video</h3>
+                <p class="text-gray-300 text-sm">
+                  Colección de tutoriales para diferentes técnicas de cosplay.
+                </p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div
+                class="w-6 h-6 flex-shrink-0 mt-1 bg-[#798665] rounded-full flex items-center justify-center text-white font-bold"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="w-4 h-4"
+                >
+                  <path
+                    fill="#ffffff"
+                    d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-gray-200 font-semibold">
+                  Proveedores Recomendados
+                </h3>
+                <p class="text-gray-300 text-sm">
+                  Lista de tiendas y proveedores de materiales para cosplay.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Sección de Consejos para Principiantes -->
+      <div
+        class="mt-8 bg-[#2F383A] bg-opacity-90 p-6 rounded-lg border border-[#95A677]"
+      >
+        <h2 class="text-2xl font-semibold text-[#B8C394] mb-4 text-center">
+          Consejos para Principiantes
+        </h2>
+        <div class="flex flex-col md:flex-row items-center gap-6">
+          <div class="md:w-1/3">
+            <img
+              src="/Img/Proteo_Tips.webp"
+              alt="Consejos de Cosplay"
+              class="rounded-lg w-full object-cover shadow-md border-2 border-[#95A677]"
+              onerror="this.src='https://picsum.photos/400/600?random=4'; this.onerror=null;"
+            />
+          </div>
+          <div class="md:w-2/3">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div
+                class="bg-[#2F383A]/70 p-4 rounded-lg border border-[#7E9C92]"
+              >
+                <h3 class="text-[#B8C394] font-semibold mb-2">
+                  Empieza con lo Simple
+                </h3>
+                <p class="text-gray-300 text-sm">
+                  Elige personajes con trajes menos complejos para tus primeros
+                  proyectos. Ganarás confianza y experiencia.
+                </p>
+              </div>
+              <div
+                class="bg-[#2F383A]/70 p-4 rounded-lg border border-[#7E9C92]"
+              >
+                <h3 class="text-[#B8C394] font-semibold mb-2">
+                  Planifica tu Presupuesto
+                </h3>
+                <p class="text-gray-300 text-sm">
+                  Haz una lista de materiales y costos antes de comenzar. El
+                  cosplay puede ser costoso, pero hay alternativas económicas.
+                </p>
+              </div>
+              <div
+                class="bg-[#2F383A]/70 p-4 rounded-lg border border-[#7E9C92]"
+              >
+                <h3 class="text-[#B8C394] font-semibold mb-2">
+                  Aprende a Reciclar
+                </h3>
+                <p class="text-gray-300 text-sm">
+                  Muchos materiales pueden reutilizarse de proyectos anteriores
+                  o encontrarse en tiendas de segunda mano.
+                </p>
+              </div>
+              <div
+                class="bg-[#2F383A]/70 p-4 rounded-lg border border-[#7E9C92]"
+              >
+                <h3 class="text-[#B8C394] font-semibold mb-2">
+                  No Temas Pedir Ayuda
+                </h3>
+                <p class="text-gray-300 text-sm">
+                  Nuestra comunidad está aquí para apoyarte. Pregunta, comparte
+                  tus dudas y aprende de otros cosplayers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección de Llamado a la Acción -->
+      <div class="mt-8 bg-[#798665] p-6 rounded-lg text-center">
+        <h2 class="text-2xl font-bold text-[#2F383A] mb-3">
+          ¿Listo para transformarte?
+        </h2>
+        <p class="text-[#2F383A] mb-4 max-w-2xl mx-auto">
+          Únete a nuestra comunidad de cosplayers y comparte tu pasión por Epic:
+          The Musical. Todos los niveles de experiencia son bienvenidos.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <BtnDiscord
+            bgColor=""
+            btnColor="[#2F383A]"
+            btnHoverColor="[#2F383A]/80"
+            textColor="[#B8C394]"
+          />
+          <div class={`p-4 rounded-lg text-center`}>
+            <a
+              href="#"
+              class="btn bg-[#7E9C92] hover:bg-[#7E9C92]/80 text-[#2F383A] border-none font-semibold"
+              >Ver Galería de Cosplays</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 text-center text-[#B8C394] font-semibold">
+        <p>Templo de Proteo: Donde la transformación es un arte</p>
+      </div>
+    </div>
+  </div>
+  <Footer />
+</Layout>
